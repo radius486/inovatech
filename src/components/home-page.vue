@@ -1,6 +1,10 @@
 <template>
   <div class="home-page">
-    <h1>{{ msg }}</h1>
+    <section class='home-carousel'>
+      <div class="container">
+        <img src='../assets/images/banner.jpg' class="home-image">
+      </div>
+    </section>
   </div>
 </template>
 
@@ -9,7 +13,6 @@ export default {
   name: 'home-page',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
