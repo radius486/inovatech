@@ -5,6 +5,26 @@
         <img src='../assets/images/banner.jpg' class="home-image">
       </div>
     </section>
+    <section class="home-catalog">
+      <div class="container">
+        <a class="home-category" href='#'>
+          <img class="home-category_image" src='../assets/images/printer.jpg'></img>
+          <h3 class="home-category_title">3d принтеры</h3>
+        </a>
+        <a class="home-category" href='#'>
+          <img class="home-category_image" src='../assets/images/printer.jpg'></img>
+          <h3 class="home-category_title">Пластик</h3>
+        </a>
+        <a class="home-category" href='#'>
+          <img class="home-category_image" src='../assets/images/printer.jpg'></img>
+          <h3 class="home-category_title">Запчасти</h3>
+        </a>
+        <a class="home-category" href='#'>
+          <img class="home-category_image" src='../assets/images/printer.jpg'></img>
+          <h3 class="home-category_title">Услуги</h3>
+        </a>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -20,7 +40,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='sass'>
-.home-page
-  margin-top: 150px
-
+  @import '../assets/styles/components/home-page.sass'
 </style>
