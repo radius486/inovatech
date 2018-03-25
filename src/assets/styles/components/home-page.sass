@@ -2,13 +2,15 @@
   font-size: 0
   background-color: #051924
 
+
 .home-catalog
-  background-color: #86b54c
-  background-image: url('../assets/images/background.png')
+  background-color: #fff
+
   .container
     display: flex
     align-items: center
     justify-content: center
+
 
 .home-category
   display: flex
@@ -19,7 +21,10 @@
   margin: 30px 22px
   text-decoration: none
   position: relative
-  background-color: #fff
+  background-color: #86b54c
+  background-image: url('../assets/images/background.png')
+  border: 2px solid #86b54c
+  box-sizing: border-box
 
   &:before
     content: ''
@@ -34,13 +39,30 @@
   &:hover:before
     background-color: rgba(0, 0, 0, 0.2)
 
+
 .home-category_image
   max-width: 100%
   max-height: 192px
   height: auto
+
 
 .home-category_title
   margin: 20px 0
   font-size: 25px
   color: #000
   font-weight: bold
+
+
+.home-contacts
+  background-color: #86b54c
+  background-image: url('../assets/images/background.png')
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 50px 55px
+
+    > div
+      flex-basis: 50%
+

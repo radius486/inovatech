@@ -25,12 +25,25 @@
         </a>
       </div>
     </section>
+    <section class="home-contacts">
+      <div class="container">
+        <div class="feedback-form"></div>
+        <contacts-component></contacts-component>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+
+import ContactsComponent from "./home-page/contacts-component.vue";
 export default {
   name: 'home-page',
+
+  components: {
+    ContactsComponent
+  },
+
   data () {
     return {
     }
