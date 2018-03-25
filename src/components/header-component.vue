@@ -2,8 +2,8 @@
   <header class='header'>
     <section class='header-contacts'>
       <div class='container'>
-        <span class='header-phone'>+375(29) 777 22 99</span>
-        <span class='header-email'>inovatech.by@gmail.com</span>
+        <span class='header-phone'>{{phone}}</span>
+        <span class='header-email'>{{email}}</span>
       </div>
     </section>
     <section class='header-navigation'>
@@ -26,7 +26,8 @@ export default {
   name: 'header-component',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      phone: '+375(29) 777 22 99',
+      email: 'inovatech.by@gmail.com'
     }
   }
 }
