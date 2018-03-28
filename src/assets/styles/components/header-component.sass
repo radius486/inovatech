@@ -1,14 +1,15 @@
 .header
-  position: absolute
+  position: fixed
   left: 0
   top: 0
   right: 0
+  z-index: 1
   background: #fff
 
 
 .header-contacts
   height: 50px
-  background-color: #81b541
+  background-color: #82b541
 
   .container
     display: flex
@@ -19,6 +20,7 @@
 
 .header-navigation
   font-size: 0
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5)
 
 
 .header-phone,
@@ -62,5 +64,7 @@
   margin: 0 25px
 
   &.active,
-  &:hover
+  &:hover,
+  &:active,
+  &:focus
     color: #17a428

@@ -5,7 +5,7 @@
         <img src='../assets/images/banner.jpg' class="home-image">
       </div>
     </section>
-    <section class="home-catalog">
+    <section class="home-catalog" id="catalog">
       <div class="container">
         <a class="home-category" href='#'>
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
@@ -25,7 +25,7 @@
         </a>
       </div>
     </section>
-    <section class="home-contacts">
+    <section class="home-contacts" id="contacts">
       <div class="container">
         <div class="feedback-form"></div>
         <contacts-component></contacts-component>
