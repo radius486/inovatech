@@ -9,11 +9,8 @@
 <script>
 export default {
   name: 'footer-component',
-  data () {
-    return {
-      text: 'Copyright © 2018 НП ООО «Иноватех». Все права защищены.'
-    }
-  }
+
+  props: ['text']
 }
 </script>
 

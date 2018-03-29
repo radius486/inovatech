@@ -22,10 +22,13 @@
 
 <script>
 
-import $ from 'jquery'
+import $ from 'jquery';
+
 export default {
 
   name: 'header-component',
+
+  props: ['phone', 'email'],
 
   mounted() {
     let padding = 0;
@@ -52,9 +55,7 @@ export default {
 
   data () {
     return {
-      locationHash: null,
-      phone: '+375(29) 777 22 99',
-      email: 'inovatech.by@gmail.com'
+      locationHash: null
     }
   },
 
