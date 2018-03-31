@@ -7,7 +7,7 @@
     </section>
     <section class="home-catalog" id="catalog">
       <div class="container">
-        <a class="home-category" href='#'>
+        <a class="home-category" href='/3d-printers'>
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">3d принтеры</h3>
         </a>

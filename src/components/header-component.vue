@@ -12,8 +12,8 @@
           <img src="../assets/images/logo.png">
         </a>
         <nav class="header-menu">
-          <a class="header-menu_link" href='#catalog'  v-bind:class="{ active: (locationHash == '#catalog')}">Каталог</a>
-          <a class="header-menu_link" href='#contacts' v-bind:class="{ active: (locationHash == '#contacts')}">Контакты</a>
+          <a class="header-menu_link" href='/#catalog'  v-bind:class="{ active: (locationHash == '#catalog')}">Каталог</a>
+          <a class="header-menu_link" href='/#contacts' v-bind:class="{ active: (locationHash == '#contacts')}">Контакты</a>
         </nav>
       </div>
     </section>
