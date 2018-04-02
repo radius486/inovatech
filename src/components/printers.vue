@@ -5,61 +5,12 @@
         <h2  class="printers_title">3d принтеры</h2>
       </div>
       <div class="container catalog-list">
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+        <a class="catalog-product" href='#' v-for='(printer, index) in printers'>
+          <img class="catalog-product_image" :src='printer.image'></img>
+          <h3 class="catalog-product_title">{{printer.title}}</h3>
+          <p class="catalog-product_description">{{printer.description}}</p>
           <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
-        </a>
-        <a class="catalog-product" href='#'>
-          <img class="catalog-product_image" src='../assets/images/printer.jpg'></img>
-          <h3 class="catalog-product_title">3d принтер</h3>
-          <p class="catalog-product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-          <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">10,00 руб</div>
+          <div class="catalog-product_price">{{printer.price}}</div>
         </a>
       </div>
   </section>
@@ -77,6 +28,12 @@ export default {
 
   data () {
     return {
+    }
+  },
+
+  computed: {
+    printers() {
+      return this.$parent.app.printers;
     }
   }
 }

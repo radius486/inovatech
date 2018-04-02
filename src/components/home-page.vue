@@ -7,22 +7,22 @@
     </section>
     <section class="home-catalog" id="catalog">
       <div class="container">
-        <a class="home-category" href='/3d-printers'>
+        <router-link to="/3d-printers"class="home-category">
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">3d принтеры</h3>
-        </a>
-        <a class="home-category" href='#'>
+        </router-link>
+        <router-link to="/3d-printers"class="home-category">
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">Пластик</h3>
-        </a>
-        <a class="home-category" href='#'>
+        </router-link>
+        <router-link to="/3d-printers"class="home-category">
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">Запчасти</h3>
-        </a>
-        <a class="home-category" href='#'>
+        </router-link>
+        <router-link to="/3d-printers"class="home-category">
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">Услуги</h3>
-        </a>
+        </router-link>
       </div>
     </section>
     <section class="home-contacts" id="contacts">

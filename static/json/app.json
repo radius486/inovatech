@@ -3,5 +3,31 @@
   "description": "3d printers",
   "phone": "+375(29) 777 22 99",
   "email": "inovatech.by@gmail.com",
-  "footer_text": "Copyright © 2018 НП ООО «Иноватех». Все права защищены."
+  "footer_text": "Copyright © 2018 НП ООО «Иноватех». Все права защищены.",
+  "printers": [
+    {
+      "title": "3d принтер1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "static/images/printer.jpg",
+      "price": "700,00 руб"
+    },
+    {
+      "title": "3d принтер2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "static/images/printer.jpg",
+      "price": "700,00 руб"
+    },
+    {
+      "title": "3d принтер3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "static/images/printer.jpg",
+      "price": "700,00 руб"
+    },
+    {
+      "title": "3d принтер4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      "image": "static/images/printer.jpg",
+      "price": "700,00 руб"
+    }
+  ]
 }
