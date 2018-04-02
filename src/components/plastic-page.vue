@@ -1,18 +1,18 @@
 <template>
-  <div class="printers-page catalog-page" :style="{minHeight: ''+ blockHeight +'px'}">
+  <div class="plastic-page catalog-page" :style="{minHeight: ''+ blockHeight +'px'}">
     <section class="catalog">
       <div class="container">
-        <h2  class="catalog_title">3d принтеры</h2>
+        <h2  class="catalog_title">Пластик</h2>
       </div>
       <div class="container catalog-list">
-        <a v-if='printers' class="catalog-product" href='#' v-for='(printer, index) in printers'>
-          <img class="catalog-product_image" :src='printer.image'></img>
-          <h3 class="catalog-product_title">{{printer.title}}</h3>
-          <p class="catalog-product_description">{{printer.description}}</p>
+        <a v-if='plastics' class="catalog-product" href='#' v-for='(plastic, index) in plastics'>
+          <img class="catalog-product_image" :src='plastic.image'></img>
+          <h3 class="catalog-product_title">{{plastic.title}}</h3>
+          <p class="catalog-product_description">{{plastic.description}}</p>
           <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">{{printer.price}}</div>
+          <div class="catalog-product_price">{{plastic.price}}</div>
         </a>
-        <p v-if='!printers' class="catalog-none">Нет в наличии</p>
+        <p v-if='!plastics' class="catalog-none">Нет в наличии</p>
       </div>
   </section>
   </div>
@@ -23,7 +23,7 @@
 import $ from 'jquery';
 
 export default {
-  name: 'printers-page',
+  name: 'plastic-page',
 
   components: {
   },
@@ -45,8 +45,8 @@ export default {
   },
 
   computed: {
-    printers() {
-      return this.$parent.app.printers;
+    plastics() {
+      return this.$parent.app.plastics;
     }
   }
 }

@@ -29,5 +29,26 @@
       "image": "static/images/printer.jpg",
       "price": "700,00 руб"
     }
+  ],
+
+  "plastics": [
+    {
+      "title": "пластик1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "static/images/printer.jpg",
+      "price": "10,00 руб"
+    },
+    {
+      "title": "пластик2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "static/images/printer.jpg",
+      "price": "10,00 руб"
+    },
+    {
+      "title": "пластик3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "static/images/printer.jpg",
+      "price": "10,00 руб"
+    }
   ]
 }
