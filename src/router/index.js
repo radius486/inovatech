@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '@/components/home-page.vue'
-import Printers from '@/components/printers.vue'
+import PrintersPage from '@/components/printers-page.vue'
 
 Vue.use(Router)
 
@@ -16,8 +16,8 @@ export default new Router({
 
     {
       path: '/3d-printers',
-      name: 'Printers',
-      component: Printers
+      name: 'PrintersPage',
+      component: PrintersPage
     }
   ]
 })

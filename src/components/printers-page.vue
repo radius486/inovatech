@@ -1,5 +1,5 @@
 <template>
-  <div class="printers">
+  <div class="printers-page">
     <section class="catalog">
       <div class="container">
         <h2  class="printers_title">3d принтеры</h2>
@@ -21,7 +21,7 @@
 
 //import ContactsComponent from "./home-page/contacts-component.vue";
 export default {
-  name: 'printers',
+  name: 'printers-page',
 
   components: {
   },
