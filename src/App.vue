@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <header-component :phone="app.phone" :email='app.email'></header-component>
-    <router-view/>
+    <transition name='fade'>
+      <router-view/>
+    </transition>
     <footer-component :text="app.footer_text"></footer-component>
   </div>
 </template>
