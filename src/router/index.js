@@ -62,7 +62,8 @@ export default new Router({
 
     {
       path: '/3d-printers/:id',
+      name: 'ProductPage',
       component: ProductPage
     }
   ]
-});
+})

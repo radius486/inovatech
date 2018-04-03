@@ -5,13 +5,13 @@
         <h2  class="catalog_title">3d принтеры</h2>
       </div>
       <div class="container catalog-list">
-        <a v-if='printers' class="catalog-product" href='#' v-for='(printer, index) in printers'>
+        <router-link :to='linkPath(index)' v-if='printers' class="catalog-product" v-for='(printer, index) in printers' :key='index'>
           <img class="catalog-product_image" :src='printer.image'></img>
           <h3 class="catalog-product_title">{{printer.title}}</h3>
           <p class="catalog-product_description">{{printer.description}}</p>
           <span class="catalog-product_more">Подробнее...</span>
           <div class="catalog-product_price">{{printer.price}}</div>
-        </a>
+        </router-link>
         <p v-if='!printers' class="catalog-none">Нет в наличии</p>
       </div>
   </section>
@@ -47,6 +47,12 @@ export default {
   computed: {
     printers() {
       return this.$parent.app.printers;
+    }
+  },
+
+  methods: {
+    linkPath(index) {
+      return `/3d-printers/${index + 1}`;
     }
   }
 }
