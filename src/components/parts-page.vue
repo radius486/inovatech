@@ -5,13 +5,13 @@
         <h2  class="catalog_title">Запчасти</h2>
       </div>
       <div class="container catalog-list">
-        <a v-if='parts' class="catalog-product" href='#' v-for='(part, index) in parts'>
+        <router-link :to='linkPath(key)' v-if='parts' class="catalog-product" v-for='(part, key) in parts' :key='key'>
           <img class="catalog-product_image" :src='part.image'></img>
           <h3 class="catalog-product_title">{{part.title}}</h3>
           <p class="catalog-product_description">{{part.description}}</p>
           <span class="catalog-product_more">Подробнее...</span>
           <div class="catalog-product_price">{{part.price}}</div>
-        </a>
+        </router-link>
         <p v-if='!parts' class="catalog-none">Нет в наличии</p>
       </div>
   </section>
@@ -47,6 +47,12 @@ export default {
   computed: {
     parts() {
       return this.$parent.app.parts;
+    }
+  },
+
+  methods: {
+    linkPath(key) {
+      return `/parts/${key}`;
     }
   }
 }

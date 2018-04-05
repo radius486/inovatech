@@ -34,7 +34,7 @@ export default {
   methods: {
     getData() {
       $.get({
-        url: 'static/json/app.json',
+        url: '/static/json/app.json',
         success: (res) => {
           this.app = res;
         }

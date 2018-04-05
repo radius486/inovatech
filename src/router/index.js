@@ -50,7 +50,7 @@ export default new Router({
 
     {
       path: '/plastic',
-      name: 'PlasticPage',
+      name: 'PlasticsPage',
       component: PlasticPage
     },
 
@@ -62,8 +62,20 @@ export default new Router({
 
     {
       path: '/3d-printers/:id',
-      name: 'ProductPage',
+      name: 'PrinterPage',
+      component: ProductPage
+    },
+
+    {
+      path: '/plastic/:id',
+      name: 'PlasticPage',
+      component: ProductPage
+    },
+
+    {
+      path: '/parts/:id',
+      name: 'PartPage',
       component: ProductPage
     }
   ]
-})
+});

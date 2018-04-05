@@ -7,7 +7,8 @@
         <img class="product_image" :src='product.image'></img>
         <p class="product_price">{{product.price}}</p>
       </div>
-  </section>
+    </section>
+    <p v-if='!product' class="catalog-none">Нет в наличии</p>
   </div>
 </template>
 
@@ -18,8 +19,17 @@ import $ from 'jquery';
 export default {
   name: 'product-page',
 
+  data () {
+    return {
+      blockHeight: 0,
+      productId: null,
+      routeName: null
+    }
+  },
+
   mounted() {
-    this.id = this.$route.params.id;
+    this.productId = this.$route.params.id;
+    this.routeName = this.$route.name;
 
     $(document).ready(() => {
       this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
@@ -30,16 +40,19 @@ export default {
     });
   },
 
-  data () {
-    return {
-      blockHeight: 0,
-      id: null
-    }
-  },
-
   computed: {
     product() {
-      return this.$parent.app.printers[this.id - 1];
+      if (this.$parent.app.printers && this.routeName == 'PrinterPage') {
+        return this.$parent.app.printers[this.productId];
+      }
+
+      if (this.$parent.app.plastics && this.routeName == 'PlasticPage') {
+        return this.$parent.app.plastics[this.productId];
+      }
+
+      if (this.$parent.app.parts && this.routeName == 'PartPage') {
+        return this.$parent.app.parts[this.productId];
+      }
     }
   }
 }

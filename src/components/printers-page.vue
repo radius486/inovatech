@@ -5,7 +5,7 @@
         <h2  class="catalog_title">3d принтеры</h2>
       </div>
       <div class="container catalog-list">
-        <router-link :to='linkPath(index)' v-if='printers' class="catalog-product" v-for='(printer, index) in printers' :key='index'>
+        <router-link :to='linkPath(key)' v-if='printers' class="catalog-product" v-for='(printer, key) in printers' :key='key'>
           <img class="catalog-product_image" :src='printer.image'></img>
           <h3 class="catalog-product_title">{{printer.title}}</h3>
           <p class="catalog-product_description">{{printer.description}}</p>
@@ -51,8 +51,8 @@ export default {
   },
 
   methods: {
-    linkPath(index) {
-      return `/3d-printers/${index + 1}`;
+    linkPath(key) {
+      return `/3d-printers/${key}`;
     }
   }
 }
