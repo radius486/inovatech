@@ -1,14 +1,19 @@
 <template>
   <div class="product-page" :style="{minHeight: ''+ blockHeight +'px'}">
-    <section v-if='product' class="product">
-      <div class="container">
-        <h2  class="product_title">{{product.title}}</h2>
-        <p class="product_description">{{product.description}}</p>
-        <img class="product_image" :src='product.image'></img>
-        <p class="product_price">{{product.price}}</p>
-      </div>
-    </section>
-    <p v-if='!product' class="catalog-none">Нет в наличии</p>
+    <div class="container">
+      <section v-if='product' class="product">
+        <div class="product_image-block">
+          <img class="product_image" :src='product.image'>
+        </div>
+        <div class="product_content-block">
+          <h2  class="product_title">{{product.title}}</h2>
+          <p class="product_description">{{product.description}}</p>
+          <p class="product_price">{{product.price}}</p>
+          <button class="product_order">Заказать</button>
+        </div>
+      </section>
+      <p v-if='!product' class="product-none">Товар не найден</p>
+    </div>
   </div>
 </template>
 

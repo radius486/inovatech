@@ -1,2 +1,87 @@
 .product-page
   background-color: #fff
+  background-image: url('../assets/images/background.png')
+  overflow: hidden
+
+  .container
+    padding: 0 20px
+
+
+.product
+  display: flex
+  align-items: normal
+  justify-content: center
+  //flex-direction: column
+
+.product_image-block
+  width: 50%
+  padding: 20px
+  font-size: 0px
+  box-sizing: border-box
+  position: relative
+
+
+.product_image
+  width: 100%
+  height: auto
+
+
+.product_content-block
+  width: 50%
+  padding: 20px 20px 130px
+  box-sizing: border-box
+  position: relative
+
+
+.product_title
+  font-size: 30px
+  margin: 20px 0
+
+
+.product_description
+  font-size: 20px
+  margin: 20px 0
+
+
+.product_price
+  display: inline-block
+  padding: 0 30px
+  border: 2px solid #146c10
+  font-size: 25px
+  line-height: 45px
+  font-weight: bold
+  color: #000
+  box-sizing: border-box
+  text-align: center
+  margin: 10px 0 0
+
+
+.product_order
+  display: block
+  padding: 0 50px
+  border: 2px solid #146c10
+  font-size: 30px
+  line-height: 70px
+  color: #82b541
+  box-sizing: border-box
+  text-align: center
+  background-color: transparent
+  cursor: pointer
+  position: absolute
+  bottom: 20px
+  left: 20px
+  transition: background-color 0.2s ease-in
+
+  &:hover
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+
+
+.product-none
+  font-size: 30px
+  margin: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 200px
