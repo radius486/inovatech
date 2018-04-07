@@ -51,6 +51,11 @@ export default {
         return this.$parent.app.printers[this.productId];
       }
 
+      if (this.$parent.app.pens && this.routeName == 'PenPage') {
+
+        return this.$parent.app.pens[this.productId];
+      }
+
       if (this.$parent.app.plastics && this.routeName == 'PlasticPage') {
         return this.$parent.app.plastics[this.productId];
       }

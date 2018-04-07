@@ -7,28 +7,58 @@
 
   "printers": {
     "3d-printer-1": {
-      "title": "3d принтер1",
+      "title": "3d принтер 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
     },
 
     "3d-printer-2": {
-      "title": "3d принтер2",
+      "title": "3d принтер 2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
     },
 
     "3d-printer-3": {
-      "title": "3d принтер3",
+      "title": "3d принтер 3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
     },
 
     "3d-printer-4": {
-      "title": "3d принтер4",
+      "title": "3d принтер 4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
+      "image": "/static/images/printer.jpg",
+      "price": "700,00 руб"
+    }
+  },
+
+  "pens": {
+    "3d-pen-1": {
+      "title": "3d ручка 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "/static/images/printer.jpg",
+      "price": "700,00 руб"
+    },
+
+    "3d-pen-2": {
+      "title": "3d ручка 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "/static/images/printer.jpg",
+      "price": "700,00 руб"
+    },
+
+    "3d-pen-3": {
+      "title": "3d ручка 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "image": "/static/images/printer.jpg",
+      "price": "700,00 руб"
+    },
+
+    "3d-pen-4": {
+      "title": "3d ручка 4",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
@@ -37,21 +67,21 @@
 
   "plastics": {
     "plastic-1":{
-      "title": "пластик1",
+      "title": "пластик 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"
     },
 
     "plastic-2": {
-      "title": "пластик2",
+      "title": "пластик 2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"
     },
 
     "plastic-3": {
-      "title": "пластик3",
+      "title": "пластик 3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"
@@ -60,28 +90,28 @@
 
   "parts": {
     "part-1": {
-      "title": "запчасть1",
+      "title": "запчасть 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"
     },
 
    "part-2":  {
-      "title": "запчасть1",
+      "title": "запчасть 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"
     },
 
     "part-3": {
-      "title": "запчасть1",
+      "title": "запчасть 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"
     },
 
     "part-4": {
-      "title": "запчасть1",
+      "title": "запчасть 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "10,00 руб"

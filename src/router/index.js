@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HomePage from '@/components/home-page.vue';
 import PrintersPage from '@/components/printers-page.vue';
+import PensPage from '@/components/pens-page.vue';
 import PlasticPage from '@/components/plastic-page.vue';
 import PartsPage from '@/components/parts-page.vue';
 import ProductPage from '@/components/product-page.vue';
@@ -49,6 +50,12 @@ export default new Router({
     },
 
     {
+      path: '/3d-pens',
+      name: 'PensPage',
+      component: PensPage
+    },
+
+    {
       path: '/plastic',
       name: 'PlasticsPage',
       component: PlasticPage
@@ -63,6 +70,12 @@ export default new Router({
     {
       path: '/3d-printers/:id',
       name: 'PrinterPage',
+      component: ProductPage
+    },
+
+    {
+      path: '/3d-pens/:id',
+      name: 'PenPage',
       component: ProductPage
     },
 

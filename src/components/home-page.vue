@@ -11,6 +11,10 @@
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">3d принтеры</h3>
         </router-link>
+        <router-link  v-if='$parent.app.pens' to="/3d-pens"class="home-category">
+          <img class="home-category_image" src='../assets/images/printer.jpg'></img>
+          <h3 class="home-category_title">3d ручки</h3>
+        </router-link>
         <router-link v-if='$parent.app.plastics' to="/plastic"class="home-category">
           <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">Пластик</h3>
