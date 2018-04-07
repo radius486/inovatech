@@ -8,7 +8,7 @@
     </section>
     <section class='header-navigation'>
       <div class='container'>
-        <router-link to="/" class="logo">
+        <router-link to="/" class="logo" :title='logoTitle'>
           <img src="../assets/images/logo.png">
         </router-link>
         <nav class="header-menu">
@@ -31,6 +31,16 @@ export default {
   data () {
     return {
 
+    }
+  },
+
+  computed: {
+    logoTitle() {
+      if (this.$route.path != '/') {
+        return 'На главную';
+      } else {
+        return 'Иноватех';
+      }
     }
   }
 }

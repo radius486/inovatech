@@ -1,6 +1,7 @@
 <template>
   <div class="product-page" :style="{minHeight: ''+ blockHeight +'px'}">
     <div class="container">
+      <router-link :to="{name: backLinkPath}" v-if='backLinkPath' class='back-link'>{{backLinkText}}</router-link>
       <section v-if='product' class="product">
         <div class="product_image-block">
           <img class="product_image" :src='product.image'>
@@ -62,6 +63,42 @@ export default {
 
       if (this.$parent.app.parts && this.routeName == 'PartPage') {
         return this.$parent.app.parts[this.productId];
+      }
+    },
+
+    backLinkText() {
+      if (this.routeName == 'PrinterPage') {
+        return '« ЗD-принтеры';
+      }
+
+      if (this.routeName == 'PenPage') {
+        return '« 3D-ручки';
+      }
+
+      if (this.routeName == 'PlasticPage') {
+        return '« Пластик';
+      }
+
+      if (this.routeName == 'PartPage') {
+        return '« Запчасти';
+      }
+    },
+
+    backLinkPath() {
+      if (this.routeName == 'PrinterPage') {
+        return 'PrintersPage';
+      }
+
+      if (this.routeName == 'PenPage') {
+        return 'PensPage';
+      }
+
+      if (this.routeName == 'PlasticPage') {
+        return 'PlasticsPage';
+      }
+
+      if (this.routeName == 'PartPage') {
+        return 'PartsPage';
       }
     }
   }
