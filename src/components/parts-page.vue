@@ -8,7 +8,7 @@
         <router-link :to='linkPath(key)' v-if='parts' class="catalog-product" v-for='(part, key) in parts' :key='key'>
           <img class="catalog-product_image" :src='part.image'></img>
           <h3 class="catalog-product_title">{{part.title}}</h3>
-          <p class="catalog-product_description">{{part.description}}</p>
+          <p class="catalog-product_description">{{part.description_short}}</p>
           <span class="catalog-product_more">Подробнее...</span>
           <div class="catalog-product_price">{{part.price}}</div>
         </router-link>
