@@ -1,0 +1,66 @@
+.VueCarousel-navigation-button
+  font-size: 0
+  text-align: center
+  padding: 0!important
+  margin: 0!important
+  display: block!important
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  background-color: #146c10!important
+  opacity: 0.8
+  transition: 0.2s ease-in
+
+  &:hover
+    opacity: 1
+
+  &:before
+    top: 11px
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border: 10px solid transparent
+
+  &:after
+    top: 11px
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border: 10px solid transparent
+
+
+.VueCarousel-navigation-prev
+  left: 60px!important
+
+  &:before
+    border-right-color: #fff
+    left: 3px
+
+  &:after
+    border-right-color: #146c10
+    right: 14px
+
+
+.VueCarousel-navigation-next
+  right: 60px!important
+
+  &:before
+    border-left-color: #fff
+    right: 3px
+
+  &:after
+    border-left-color: #146c10
+    left: 14px
+
+
+.VueCarousel-pagination
+  position: relative
+  margin-top: -55px
+  padding-bottom: 5px
+
+
+.VueCarousel-dot-button
+  &:focus
+    outline: none!important

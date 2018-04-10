@@ -2,13 +2,14 @@
   <div class="home-page">
     <section class='home-carousel'>
       <div class="container">
-        <img src='../assets/images/banner.jpg' class="home-image">
+        <carousel-component v-if='slides' :slides='slides'></carousel-component>
+        <img v-else src='../assets/images/banner.jpg' class="home-image">
       </div>
-    </section>
-    <section class="home-catalog" id="catalog">
-      <div class="container">
-        <router-link  v-if='$parent.app.printers' to="/3d-printers"class="home-category">
-          <img class="home-category_image" src='../assets/images/printer.jpg'></img>
+      </section>
+      <section class="home-catalog" id="catalog">
+        <div class="container">
+          <router-link  v-if='$parent.app.printers' to="/3d-printers"class="home-category">
+            <img class="home-category_image" src='../assets/images/printer.jpg'></img>
           <h3 class="home-category_title">3d принтеры</h3>
         </router-link>
         <router-link  v-if='$parent.app.pens' to="/3d-pens"class="home-category">
@@ -41,15 +42,18 @@
 <script>
 
 import ContactsComponent from "./home-page/contacts-component.vue";
+import CarouselComponent from "./home-page/carousel-component.vue";
 export default {
   name: 'home-page',
 
   components: {
-    ContactsComponent
+    ContactsComponent,
+    CarouselComponent
   },
 
-  data () {
-    return {
+  computed: {
+    slides() {
+      return this.$parent.app.carousel_slides;
     }
   }
 }

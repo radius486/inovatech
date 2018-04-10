@@ -1,6 +1,7 @@
 <template>
   <div class="services-page" :style="{minHeight: ''+ blockHeight +'px'}">
     <div class="container">
+      <router-link to='/' class='back-link'>« На главную</router-link>
       <section v-if='services' class="services">
         <div class="services_content-block">
           <h2  class="services_title">{{services.title}}</h2>

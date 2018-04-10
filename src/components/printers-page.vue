@@ -2,6 +2,7 @@
   <div class="printers-page catalog-page" :style="{minHeight: ''+ blockHeight +'px'}">
     <section class="catalog">
       <div class="container">
+        <router-link to='/' class='back-link'>« На главную</router-link>
         <h2  class="catalog_title">3d принтеры</h2>
       </div>
       <div class="container catalog-list">
