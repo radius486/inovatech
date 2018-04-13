@@ -32,7 +32,10 @@
     </section>
     <section class="home-contacts" id="contacts">
       <div class="container">
-        <div class="feedback-form"></div>
+        <feedback-component
+          :productName='$parent.productName'
+          :productColor='$parent.productColor'>
+        </feedback-component>
         <contacts-component></contacts-component>
       </div>
     </section>
@@ -43,12 +46,14 @@
 
 import ContactsComponent from "./home-page/contacts-component.vue";
 import CarouselComponent from "./home-page/carousel-component.vue";
+import FeedbackComponent from "./home-page/feedback-component.vue";
 export default {
   name: 'home-page',
 
   components: {
     ContactsComponent,
-    CarouselComponent
+    CarouselComponent,
+    FeedbackComponent
   },
 
   computed: {

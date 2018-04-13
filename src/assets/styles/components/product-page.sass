@@ -13,6 +13,7 @@
   justify-content: center
   //flex-direction: column
 
+
 .product_image-block
   width: 50%
   padding: 20px
@@ -25,7 +26,6 @@
   width: 100%
   height: auto
   border: 2px solid #146c10
-
 
 
 .product_content-block
@@ -41,6 +41,11 @@
 
 
 .product_description
+  font-size: 20px
+  margin: 20px 0
+
+
+.product_color
   font-size: 20px
   margin: 20px 0
 
@@ -72,10 +77,13 @@
   position: absolute
   bottom: 20px
   left: 20px
+  margin: 0
   transition: background-color 0.2s ease-in
 
-  &:hover
-    background-color: rgba(0, 0, 0, 0.1);
+  &:hover,
+  &:focus
+    outline: none
+    background-color: rgba(0, 0, 0, 0.1)
 
 
 .product-none

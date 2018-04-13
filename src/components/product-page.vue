@@ -9,8 +9,9 @@
         <div class="product_content-block">
           <h2  class="product_title">{{product.title}}</h2>
           <p class="product_description">{{product.description}}</p>
+          <p class="product_color" v-if='product.color'>Цвет: {{product.color}}</p>
           <p class="product_price">{{product.price}}</p>
-          <button class="product_order">Заказать</button>
+          <button class="product_order" @click.prevent='sendToForm'>Заказать</button>
         </div>
       </section>
       <p v-if='!product' class="product-none">Товар не найден</p>
@@ -100,6 +101,14 @@ export default {
       if (this.routeName == 'PartPage') {
         return 'PartsPage';
       }
+    }
+  },
+
+  methods: {
+    sendToForm() {
+      this.$parent.productName = this.product.title;
+      this.$parent.productColor = this.product.color;
+      this.$router.push('/#contacts');
     }
   }
 }

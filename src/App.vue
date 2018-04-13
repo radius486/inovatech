@@ -18,7 +18,9 @@ export default {
 
   data() {
     return {
-      app: {}
+      app: {},
+      productName: null,
+      productColor: null
     }
   },
 
