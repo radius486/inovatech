@@ -3,15 +3,15 @@
     :navigationEnabled="true"
     :perPage="1"
     :autoplay="true"
-    :speed="1000"
-    :autoplayTimeout="4000"
+    :speed="2000"
+    :autoplayTimeout="20000"
     navigationPrevLabel="‹"
     navigationNextLabel="›"
     paginationActiveColor="#146c10"
     paginationColor="#fff"
     :loop="true">
     <slide v-for='(slide, index) in slides' :key='index'>
-      <img :src='slide' class="home-image">
+      <div :style="{backgroundImage: 'url(' + slide + ')'}" class="home-image"></div>
     </slide>
   </carousel>
 </template>

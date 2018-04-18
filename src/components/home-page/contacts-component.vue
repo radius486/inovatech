@@ -15,7 +15,7 @@ export default {
   name: 'contacts-component',
   data () {
     return {
-      title: 'Контакты',
+      title: 'Контактная информация',
       company: 'НП ООО «Иноватех»',
       unp: 'УНП 690669738',
       phone: '+37529 777 22 99',

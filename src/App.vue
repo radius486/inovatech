@@ -48,4 +48,5 @@ export default {
 
 <style lang='sass'>
   @import './assets/styles/app.sass'
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=cyrillic')
 </style>

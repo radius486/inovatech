@@ -1,6 +1,6 @@
 <template>
   <div class="feedback-block">
-    <h2 class="feedback-block_title">Форма заказа товара</h2>
+    <h2 class="feedback-block_title">Свяжитесь с нами</h2>
     <form class="feedback-form" id="feedback">
       <div class="feedback-field--wrapper">
         <label for="productName" v-if="currentProductName">Название товара:</label>
@@ -29,7 +29,12 @@
         </div>
       </div>
 
-      <input type="submit" class="feedback-form_submit" value="Заказать" :disabled='disabled' :class="{ 'disabled': disabled }" >
+      <div class="feedback-field--wrapper">
+        <label for="currentCustomerComment" v-if="currentCustomerComment">Комментарий:</label>
+        <textarea id="currentCustomerComment" type="text" class="feedback-form_field" placeholder="Комментарий" resize="none" v-model='currentCustomerComment'></textarea>
+      </div>
+
+      <input type="submit" class="feedback-form_submit" value="Отправить" :disabled='disabled' :class="{ 'disabled': disabled }" >
     </form>
   </div>
 </template>
@@ -47,7 +52,8 @@ export default {
       currentProductColor: this.productColor,
       currentCustomerName: null,
       currentCustomerPhone: null,
-      currentProductQuantity: null
+      currentProductQuantity: null,
+      currentCustomerComment: null
     }
   },
 
