@@ -6,7 +6,7 @@
         <div class="services_content-block">
           <h2  class="services_title">{{services.title}}</h2>
           <p class="services_description">{{services.description}}</p>
-          <button class="services_order">Заказать</button>
+          <button class="services_order" @click.prevent='sendToForm'>Заказать</button>
         </div>
         <div class="services_image-block">
           <img class="services_image" :src='services.image'>
@@ -47,7 +47,13 @@ export default {
         return this.$parent.app.services;
       }
     }
+  },
 
+  methods: {
+    sendToForm() {
+      this.$parent.productName = this.services.title;
+      this.$router.push('/#contacts');
+    }
   }
 }
 </script>

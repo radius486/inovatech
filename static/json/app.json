@@ -1,6 +1,6 @@
 {
   "name": "inovatech",
-  "description": "3d printers",
+  "description": "3D printers",
   "phone": "+375(29) 777 22 99",
   "email": "inovatech.by@gmail.com",
   "footer_text": "Copyright © 2018 НП ООО «Иноватех». Все права защищены.",
@@ -13,32 +13,32 @@
   ],
 
   "printers": {
-    "3d-printer-1": {
-      "title": "3d принтер 1",
+    "3D-printer-1": {
+      "title": "3D принтер 1",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
     },
 
-    "3d-printer-2": {
-      "title": "3d принтер 2",
+    "3D-printer-2": {
+      "title": "3D принтер 2",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
     },
 
-    "3d-printer-3": {
-      "title": "3d принтер 3",
+    "3D-printer-3": {
+      "title": "3D принтер 3",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
       "price": "700,00 руб"
     },
 
-    "3d-printer-4": {
-      "title": "3d принтер 4",
+    "3D-printer-4": {
+      "title": "3D принтер 4",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
       "image": "/static/images/printer.jpg",
@@ -47,8 +47,8 @@
   },
 
   "pens": {
-    "3d-pen-1": {
-      "title": "3d ручка 1",
+    "3D-pen-1": {
+      "title": "3D ручка 1",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
@@ -56,8 +56,8 @@
       "price": "700,00 руб"
     },
 
-    "3d-pen-2": {
-      "title": "3d ручка 2",
+    "3D-pen-2": {
+      "title": "3D ручка 2",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
@@ -65,8 +65,8 @@
       "price": "700,00 руб"
     },
 
-    "3d-pen-3": {
-      "title": "3d ручка 3",
+    "3D-pen-3": {
+      "title": "3D ручка 3",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "image": "/static/images/printer.jpg",
@@ -74,8 +74,8 @@
       "price": "700,00 руб"
     },
 
-    "3d-pen-4": {
-      "title": "3d ручка 4",
+    "3D-pen-4": {
+      "title": "3D ручка 4",
       "description_short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ",
       "image": "/static/images/printer.jpg",
