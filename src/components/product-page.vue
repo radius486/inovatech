@@ -8,8 +8,8 @@
         </div>
         <div class="product_content-block">
           <h2  class="product_title">{{product.title}}</h2>
-          <p class="product_description">{{product.description}}</p>
-          <p class="product_color" v-if='product.color'>Цвет: {{product.color}}</p>
+          <p class="product_description" v-html='product.description'></p>
+          <p class="product_color" v-if='product.color'>Цвет: <b>{{product.color}}</b></p>
           <p class="product_price">{{product.price}}</p>
           <button class="product_order" @click.prevent='sendToForm'>Заказать</button>
         </div>

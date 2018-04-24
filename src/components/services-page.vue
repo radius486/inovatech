@@ -5,7 +5,7 @@
       <section v-if='services' class="services">
         <div class="services_content-block">
           <h2  class="services_title">{{services.title}}</h2>
-          <p class="services_description">{{services.description}}</p>
+          <p class="services_description" v-html='services.description'></p>
           <button class="services_order" @click.prevent='sendToForm'>Заказать</button>
         </div>
         <div class="services_image-block">
