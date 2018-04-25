@@ -10,13 +10,28 @@
   display: flex
   align-items: normal
   justify-content: center
-  //flex-direction: column
+
+  @media(max-width: 960px)
+    flex-direction: column
+    margin-top: 20px
 
 .services_image-block
   width: 33%
   font-size: 0px
   box-sizing: border-box
   position: relative
+
+  @media(max-width: 960px)
+    width: 40%
+    order: 0
+    margin: 0 auto
+
+  @media(max-width: 660px)
+    width: 70%
+
+  @media(max-width: 420px)
+    width: 80%
+
 
 
 .services_image
@@ -30,6 +45,10 @@
   box-sizing: border-box
   position: relative
   padding-bottom: 160px
+
+  @media(max-width: 960px)
+    width: 100%
+    order: 1
 
 
 .services_title
