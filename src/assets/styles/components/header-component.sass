@@ -11,6 +11,12 @@
   height: 35px
   background-color: #82b541
 
+  @media(max-width: 660px)
+    height: 25px
+
+  @media(max-width: 420px)
+    height: 20px
+
   .container
     display: flex
     justify-content: flex-start
@@ -21,6 +27,21 @@
 .header-navigation
   font-size: 0
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5)
+  height: 63px
+
+  @media(max-width: 660px)
+    height: 50px
+
+  @media(max-width: 420px)
+    height: 40px
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+    padding: 0 20px
+
 
 
 .header-phone,
@@ -32,6 +53,14 @@
   color: #fff
   position: relative
 
+  @media(max-width: 660px)
+    font-size: 14px
+    padding-left: 18px
+
+  @media(max-width: 420px)
+    font-size: 12px
+    padding-left: 15px
+
   &:before
     content: ''
     position: absolute
@@ -39,6 +68,17 @@
     left: 0
     width: 20px
     height: 20px
+
+    @media(max-width: 660px)
+      font-size: 14px
+      width: 18px
+      height: 18px
+
+    @media(max-width: 420px)
+      font-size: 12px
+      width: 15px
+      height: 15px
+      background-size: 75% !important
 
 
 .header-phone
@@ -52,23 +92,23 @@
 .header-email
   margin-left: 30px
 
+  @media(max-width: 660px)
+    margin-left: 20px
+
+  @media(max-width: 420px)
+    margin-left: 10px
+
   &:before
     background: url('../assets/images/email.png') no-repeat center
     background-size: 80%
 
 
 .logo
+  height: 100%
+
   img
-    height: 63px
-
-
-.header-navigation
-  .container
-    display: flex
-    justify-content: space-between
-    align-items: center
     height: 100%
-    padding: 0 20px
+    width: auto
 
 
 .header-menu
@@ -80,8 +120,16 @@
   font-size: 24px
   text-decoration: none
   color: #000
-  margin: 5px 20px 0
+  margin: 0 20px
   transition: color 0.2s ease-in
+
+  @media(max-width: 660px)
+    margin: 0 12px
+    font-size: 20px
+
+  @media(max-width: 420px)
+    margin: 0 6px
+    font-size: 15px
 
   &:last-child
     margin-right: 0
