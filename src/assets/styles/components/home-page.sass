@@ -35,10 +35,6 @@
     @media(max-width: 960px)
       max-width: 700px
 
-    @media(max-width: 660px)
-      justify-content: center
-
-
 .home-category
   display: flex
   width: 200px
@@ -68,14 +64,14 @@
     background-color: rgba(0, 0, 0, 0.2)
 
   @media(max-width: 1200px)
-    width: calc(100%/3 - 20px)
+    width: calc(100%/4 - 20px)
     margin: 10px
 
   @media(max-width: 960px)
-    width: calc(100%/2 - 20px)
+    width: calc(100%/3 - 20px)
 
   @media(max-width: 660px)
-    width: calc(100% - 20px)
+    width: calc(100%/2 - 20px)
 
 
 
@@ -91,6 +87,9 @@
   color: #000
   font-weight: bold
 
+  @media(max-width: 420px)
+    font-size: 20px
+
 
 .home-contacts
   background-color: #7ead43
@@ -104,6 +103,12 @@
 
     @media(max-width: 960px)
       flex-direction: column
+
+    @media(max-width: 660px)
+      padding: 30px 20px
+
+    @media(max-width: 420px)
+      padding: 20px 20px
 
     > div
       flex-basis: 50%
