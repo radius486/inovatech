@@ -36,7 +36,7 @@ export default new Router({
 
       if(window.scrollHeight && (to.name != "HomePage") && (from.name == 'PlasticPage' || from.name == 'PrinterPage' || from.name == 'PenPage' || from.name == 'PartPage')) {
         scrollHeight = window.scrollHeight;
-        letency = 320;
+        letency = 400;
       }
 
       setTimeout(() => {
