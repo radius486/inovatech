@@ -5,7 +5,7 @@
         <router-link to='/' class='back-link'>« На главную</router-link>
         <h2  class="catalog_title">Пластик</h2>
       </div>
-      <div class="container catalog-list">
+      <div class="container catalog-list" @click='saveScroll()'>
         <router-link :to='linkPath(key)' v-if='plastics' class="catalog-product" v-for='(plastic, key) in plastics' :key='key'>
           <img class="catalog-product_image" :src='plastic.image'></img>
           <h3 class="catalog-product_title">{{plastic.title}}</h3>
@@ -54,6 +54,10 @@ export default {
   methods: {
     linkPath(key) {
       return `/plastic/${key}`;
+    },
+
+    saveScroll() {
+      window.scrollHeight = $(window).scrollTop();
     }
   }
 }

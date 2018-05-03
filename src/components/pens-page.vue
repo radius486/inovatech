@@ -5,7 +5,7 @@
         <router-link to='/' class='back-link'>« На главную</router-link>
         <h2  class="catalog_title">3D ручки</h2>
       </div>
-      <div class="container catalog-list">
+      <div class="container catalog-list" @click='saveScroll()'>
         <router-link :to='linkPath(key)' v-if='pens' class="catalog-product" v-for='(printer, key) in pens' :key='key'>
           <img class="catalog-product_image" :src='printer.image'></img>
           <h3 class="catalog-product_title">{{printer.title}}</h3>
@@ -54,6 +54,10 @@ export default {
   methods: {
     linkPath(key) {
       return `/3d-pens/${key}`;
+    },
+
+    saveScroll() {
+      window.scrollHeight = $(window).scrollTop();
     }
   }
 }
