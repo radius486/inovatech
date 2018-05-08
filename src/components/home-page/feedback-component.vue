@@ -25,7 +25,18 @@
         </div>
         <div class="feedback-field--wrapper">
           <label for="customerPhone" v-if='currentCustomerPhone'>Номер телефона:</label>
-          <input id="customerPhone" type="text" class="feedback-form_field" placeholder="*Номер телефона" v-model='currentCustomerPhone'>
+
+          <masked-input
+            class="feedback-form_field"
+            name="phone"
+            id="customerPhone"
+            type="phone"
+            placeholder="*Номер телефона"
+            v-model='currentCustomerPhone'
+            :keepCharPositions=true
+            :mask="['+', '3', '7', '5', '(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/]"
+            placeholderChar="#">
+          </masked-input>
         </div>
       </div>
 
@@ -40,6 +51,10 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import MaskedInput from 'vue-text-mask';
+
+Vue.component('masked-input', MaskedInput);
 
 export default {
   name: 'feedback-component',
@@ -63,7 +78,9 @@ export default {
 
   computed: {
     disabled() {
-      return (!this.currentProductName || !this.currentCustomerPhone);
+      let reg = /#/;
+
+      return (!this.currentProductName || !this.currentCustomerPhone || reg.test(this.currentCustomerPhone));
     }
   }
 }
