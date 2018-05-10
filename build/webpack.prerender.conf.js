@@ -3,12 +3,26 @@ const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.prod.conf')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
-const pageRoutes = require('../src/router/routes')
-const routePaths = []
+const app = require('../static/json/app.json');
 
-pageRoutes.map(function(el) {
-  routePaths.push(el.path)
+const routePaths = ['/', '/3d-printers', '/3d-pens', '/plastic', '/parts', '/services'];
+
+Object.keys(app.printers).map(function(el) {
+  routePaths.push('/3d-printers/' + el)
 })
+
+Object.keys(app.pens).map(function(el) {
+  routePaths.push('/3d-pens/' + el)
+})
+
+Object.keys(app.plastics).map(function(el) {
+  routePaths.push('/plastic/' + el)
+})
+
+Object.keys(app.parts).map(function(el) {
+  routePaths.push('/parts/' + el)
+})
+
 
 const webpackConfig = merge(baseWebpackConfig, {
   plugins: [
