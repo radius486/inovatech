@@ -29,7 +29,11 @@ const webpackConfig = merge(baseWebpackConfig, {
     // prerender the important pages
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, '../dist'),
-      routes: routePaths
+      routes: routePaths,
+      phantomPageViewportSize: {
+        width: 1242,
+        height: 742
+      }
     })
   ]
 })
