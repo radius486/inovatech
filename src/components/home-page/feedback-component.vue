@@ -1,51 +1,81 @@
 <template>
   <div class="feedback-block">
     <h2 class="feedback-block_title">Свяжитесь с нами</h2>
-    <form class="feedback-form" id="feedback">
+    <form class="feedback-form" :class="{'show-errors': isSubmitClicked}" id="feedback">
       <div class="feedback-field--wrapper">
-        <label for="productName" v-if="currentProductName">Название товара:</label>
-        <textarea id="productName" type="text" class="feedback-form_field" placeholder="*Название товара" resize="none" v-model='currentProductName'></textarea>
+        <input
+          id="productName"
+          type="text" class="feedback-form_field"
+          :class="{'not-valid': !validateProduct}"
+          v-model='currentProductName'>
+        <label for="productName" :class="{'active':currentProductName}">*Название товара</label>
+        <!--{{validateProduct}}-->
       </div>
 
       <div class="form-feedback_group">
         <div class="feedback-field--wrapper">
-          <label for="productColor" v-if='currentProductColor'>Цвет:</label>
-          <input id="productColor" type="text" class="feedback-form_field" placeholder="Цвет" v-model='currentProductColor'>
+          <input
+            id="productColor"
+            type="text"
+            class="feedback-form_field"
+            :class="{'not-valid': !validateColor}"
+            v-model='currentProductColor'>
+          <label for="productColor" :class="{'active':currentProductColor}">Цвет</label>
+          <!--{{validateColor}}-->
         </div>
         <div class="feedback-field--wrapper">
-          <label for="productQuantity" v-if='currentProductQuantity'>Количество:</label>
-          <input id="productQuantity" type="text" class="feedback-form_field" placeholder="Количество" v-model='currentProductQuantity'>
+          <input
+            id="productQuantity"
+            type="text"
+            class="feedback-form_field"
+            :class="{'not-valid': !validateQuantity}"
+            v-model='currentProductQuantity'>
+          <label for="productQuantity" :class="{'active':currentProductQuantity}">Количество</label>
+          <!--{{validateQuantity}}-->
         </div>
       </div>
 
       <div class="form-feedback_group">
         <div class="feedback-field--wrapper">
-          <label for="customerName" v-if='currentCustomerName'>Имя:</label>
-          <input id="customerName" type="text" class="feedback-form_field" placeholder="Имя" v-model='currentCustomerName'>
+          <input id="customerName"
+            type="text"
+            class="feedback-form_field"
+            :class="{'not-valid': !validateName}"
+            v-model='currentCustomerName'>
+          <label for="customerName" :class="{'active':currentCustomerName}">Имя</label>
+          <!--{{validateName}}-->
         </div>
         <div class="feedback-field--wrapper">
-          <label for="customerPhone" v-if='currentCustomerPhone'>Номер телефона:</label>
-
           <masked-input
             class="feedback-form_field"
+            :class="{'not-valid': !validatePhone}"
             name="phone"
             id="customerPhone"
             type="phone"
-            placeholder="*Номер телефона"
             v-model='currentCustomerPhone'
             :keepCharPositions=true
             :mask="['+', '3', '7', '5', '(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/]"
-            placeholderChar="#">
+            placeholderChar="_">
           </masked-input>
+          <label for="customerPhone" :class="{'active':currentCustomerPhone}">Номер телефона</label>
+          <!--{{validatePhone}}-->
         </div>
       </div>
 
       <div class="feedback-field--wrapper">
-        <label for="currentCustomerComment" v-if="currentCustomerComment">Комментарий:</label>
-        <textarea id="currentCustomerComment" type="text" class="feedback-form_field" placeholder="Комментарий" resize="none" v-model='currentCustomerComment'></textarea>
+        <textarea
+          id="currentCustomerComment"
+          type="text"
+          class="feedback-form_field"
+          :class="{'not-valid': !validateComment}"
+          resize="none"
+          v-model='currentCustomerComment'>
+        </textarea>
+        <label for="currentCustomerComment" :class="{'active':currentCustomerComment}">Комментарий</label>
+        <!--{{validateComment}}-->
       </div>
 
-      <input type="submit" class="feedback-form_submit" value="Отправить" :disabled='disabled' :class="{ 'disabled': disabled }" >
+      <input type="submit" class="feedback-form_submit" value="Отправить" :disabled='disabled' :class="{ 'disabled': disabled }" @click.prevent=submitForm()>
     </form>
   </div>
 </template>
@@ -68,7 +98,8 @@ export default {
       currentCustomerName: null,
       currentCustomerPhone: null,
       currentProductQuantity: null,
-      currentCustomerComment: null
+      currentCustomerComment: null,
+      isSubmitClicked: false
     }
   },
 
@@ -77,10 +108,66 @@ export default {
   },
 
   computed: {
-    disabled() {
-      let reg = /#/;
+    validateQuantity() {
+      let reg = /^\d+$/;
+      if (this.currentProductQuantity == null || this.currentProductQuantity == '') {
+        return true;
+      } else {
+        return reg.test(this.currentProductQuantity);
+      }
+    },
 
-      return (!this.currentProductName || !this.currentCustomerPhone || reg.test(this.currentCustomerPhone));
+    validateProduct() {
+      let reg = /^[a-zа-яё0-9/() .,_-]*$/i;
+      return reg.test(this.currentProductName) && this.currentProductName != null && this.currentProductName != '';
+    },
+
+    validatePhone() {
+      let reg = /_/;
+      return !reg.test(this.currentCustomerPhone) && this.currentCustomerPhone != null && this.currentCustomerPhone != '';
+    },
+
+    validateName() {
+      let reg = /^[a-zа-яё ]*$/i;
+      if (this.currentCustomerName == null || this.currentCustomerName == '') {
+        return true;
+      } else {
+        return reg.test(this.currentCustomerName);
+      }
+    },
+
+    validateComment() {
+      let reg = /^[a-zа-яё0-9/()?@\s .,_-]*$/i;
+      if (this.currentCustomerComment == null || this.currentCustomerComment == '') {
+        return true;
+      } else {
+        return reg.test(this.currentCustomerComment);
+      }
+    },
+
+    validateColor() {
+      let reg = /^[a-zа-яё, ]*$/i;
+      if (this.currentProductColor == null || this.currentProductColor == '') {
+        return true;
+      } else {
+        return reg.test(this.currentProductColor);
+      }
+    },
+
+    disabled() {
+      return (!this.validateProduct || !this.validatePhone);
+    }
+  },
+
+  methods: {
+    submitForm() {
+      console.log('Submit');
+      this.isSubmitClicked = true;
+      if (this.validateQuantity && this.validateProduct && this.validateName && this.validatePhone && this.validateColor && this.validateComment ) {
+        console.log('form is valid');
+      } else {
+        console.log('form has errors');
+      }
     }
   }
 }

@@ -52,6 +52,7 @@ export default {
   methods: {
     sendToForm() {
       this.$parent.productName = this.services.title;
+      this.$parent.productColor = this.services.color;
       this.$router.push('/#contacts');
     }
   }

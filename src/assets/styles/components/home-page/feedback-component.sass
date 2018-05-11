@@ -42,11 +42,22 @@
 
   label
     position: absolute
+    top: 29px
+    left: 22px
+    font-size: 20px
+    color: #555
+    transition: all .1s ease-in
+
+  input:focus + label,
+  textarea:focus + label,
+  label.active
+    position: absolute
     top: 7px
     left: 0
     font-size: 14px
     text-transform: uppercase
     color: #fff
+
 
 
 .feedback-form_field
@@ -102,3 +113,6 @@ textarea.feedback-form_field
     cursor: default
     color: #999
 
+.show-errors
+  .not-valid
+    background-color: #e8a4a4
