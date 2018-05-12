@@ -47,6 +47,7 @@
         </div>
         <div class="feedback-field--wrapper">
           <masked-input
+            @click='setPhoneBeginning'
             class="feedback-form_field"
             :class="{'not-valid': !validatePhone}"
             name="phone"
@@ -54,7 +55,7 @@
             type="phone"
             v-model='currentCustomerPhone'
             :keepCharPositions=true
-            :mask="['+', '3', '7', '5', '(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/]"
+            :mask="['+', /\d/, /\d/, /\d/, '(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/]"
             placeholderChar="_">
           </masked-input>
           <label for="customerPhone" :class="{'active':currentCustomerPhone}">Номер телефона</label>
@@ -167,6 +168,15 @@ export default {
         console.log('form is valid');
       } else {
         console.log('form has errors');
+      }
+    },
+
+    setPhoneBeginning() {
+      if(this.currentCustomerPhone == null || this.currentCustomerPhone == '') {
+        this.currentCustomerPhone = '+375';
+        setTimeout(function() {
+          document.getElementById('customerPhone').selectionStart = 5;
+        }, 100);
       }
     }
   }
