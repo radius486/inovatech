@@ -53,6 +53,48 @@ html, body
     color: #17a428
 
 
+.to-top-button
+  position: fixed
+  bottom: 90px
+  right: 40px
+  cursor: pointer
+  font-size: 0
+  opacity: 0.2
+  background-color: #000
+  padding: 0
+  border: 0
+  border-radius: 50%
+  width: 50px
+  height: 50px
+  transition: opacity .2s ease-in
+  z-index: 4
+
+  &:hover
+    opacity: 0.5
+
+  &:focus
+    outline: none
+
+  &:before
+    content: ''
+    position: absolute
+    border: 12px solid transparent
+    border-bottom-color: #fff
+    top: 6px
+    left: 50%
+    margin-left: -12px
+
+  &:after
+    content: ''
+    position: absolute
+    border: 12px solid transparent
+    border-bottom-color: #000
+    top: 10px
+    left: 50%
+    margin-left: -12px
+
+
+
 // transition name='fade'
 .fade-leave-active
   transition: ease-out opacity 0.25s
@@ -65,6 +107,7 @@ html, body
   will-change: opacity
 
 
+
 // Disable all scrollbars
-::-webkit-scrollbar
-    display: none
+//::-webkit-scrollbar
+    //display: none

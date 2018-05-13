@@ -36,7 +36,7 @@
           :productName='$parent.productName'
           :productColor='$parent.productColor'>
         </feedback-component>
-        <contacts-component :contacts='contacts'></contacts-component>
+        <contacts-component v-if='contacts' :contacts='contacts'></contacts-component>
       </div>
     </section>
   </div>

@@ -4,6 +4,7 @@
     <transition name='fade'>
       <router-view/>
     </transition>
+    <button class="to-top-button" @click.prevent='scrollToTop()' title='наверх'>to top</button>
     <footer-component :text="app.footer_text"></footer-component>
   </div>
 </template>
@@ -41,6 +42,12 @@ export default {
           this.app = res;
         }
       })
+    },
+
+    scrollToTop() {
+      $('html, body').animate({
+          scrollTop: 0
+        }, 500);
     }
   }
 }
