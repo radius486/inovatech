@@ -36,7 +36,7 @@
           :productName='$parent.productName'
           :productColor='$parent.productColor'>
         </feedback-component>
-        <contacts-component></contacts-component>
+        <contacts-component :contacts='contacts'></contacts-component>
       </div>
     </section>
   </div>
@@ -59,6 +59,10 @@ export default {
   computed: {
     slides() {
       return this.$parent.app.carousel_slides;
+    },
+
+    contacts() {
+      return this.$parent.app.contacts;
     }
   }
 }
