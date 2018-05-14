@@ -4,7 +4,9 @@
     <transition name='fade'>
       <router-view/>
     </transition>
-    <button class="to-top-button" @click.prevent='scrollToTop()' title='наверх'>to top</button>
+    <transition name='fade'>
+      <button v-if='showScroll' class="to-top-button" @click.prevent='scrollToTop()' title='наверх'>to top</button>
+    </transition>
     <footer-component :text="app.footer_text"></footer-component>
   </div>
 </template>
@@ -21,17 +23,29 @@ export default {
     return {
       app: {},
       productName: null,
-      productColor: null
+      productColor: null,
+      scrollTop: null
     }
   },
 
   created() {
     this.getData();
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   },
 
   components: {
     HeaderComponent,
     FooterComponent
+  },
+
+  computed: {
+    showScroll() {
+      return this.scrollTop > 500;
+    }
   },
 
   methods: {
@@ -48,6 +62,10 @@ export default {
       $('html, body').animate({
           scrollTop: 0
         }, 500);
+    },
+
+    handleScroll () {
+      this.scrollTop = window.scrollY ;
     }
   }
 }
