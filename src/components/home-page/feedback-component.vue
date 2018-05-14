@@ -84,6 +84,7 @@
 <script>
 import Vue from 'vue';
 import MaskedInput from 'vue-text-mask';
+import $ from 'jquery';
 
 Vue.component('masked-input', MaskedInput);
 
@@ -166,6 +167,25 @@ export default {
       this.isSubmitClicked = true;
       if (this.validateQuantity && this.validateProduct && this.validateName && this.validatePhone && this.validateColor && this.validateComment ) {
         console.log('form is valid');
+
+        let data = {
+          name: this.currentCustomerName,
+          phone: this.currentCustomerPhone,
+          product: this.currentProductName,
+          color: this.currentProductColor,
+          quantity: this.currentProductQuantity,
+          comment: this.currentCustomerComment
+        }
+
+        $.ajax({
+          type: "post",
+          url: "/php/email.php",
+          dataType:"json",
+          data: data,
+          success: (response) => {
+            console.log(responce);
+          }
+        })
       } else {
         console.log('form has errors');
       }
