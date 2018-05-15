@@ -105,6 +105,6 @@ export default new Router({
       path: '/services',
       name: 'ServicesPage',
       component: ServicesPage
-    },
+    }
   ]
 });

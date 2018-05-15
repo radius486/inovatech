@@ -48,6 +48,7 @@
         <div class="feedback-field--wrapper">
           <masked-input
             @click='setPhoneBeginning'
+            @focus='setPhoneBeginning'
             class="feedback-form_field"
             :class="{'not-valid': !validatePhone}"
             name="phone"
@@ -180,10 +181,13 @@ export default {
         $.ajax({
           type: "post",
           url: "/php/email.php",
-          dataType:"json",
+          dataType:"text",
           data: data,
           success: (response) => {
-            console.log(responce);
+            console.log(response);
+          },
+          error: () => {
+            console.log('К сожалению сооющение не отправлено. Попробуйте ещё раз.');
           }
         })
       } else {
