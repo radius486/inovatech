@@ -34,7 +34,8 @@
       <div class="container">
         <feedback-component
           :productName='$parent.productName'
-          :productColor='$parent.productColor'>
+          :productColor='$parent.productColor'
+          :messages='$parent.app.feedback_messages'>
         </feedback-component>
         <contacts-component v-if='contacts' :contacts='contacts'></contacts-component>
       </div>

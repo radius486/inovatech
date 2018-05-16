@@ -79,12 +79,24 @@
 
       <input type="submit" class="feedback-form_submit" value="Отправить" :disabled='disabled' :class="{ 'disabled': disabled }" @click.prevent=submitForm()>
     </form>
+
+    <sweet-modal
+      class='feedback-overlay'
+      :icon='messageStatus'
+      modal-theme='white'
+      overlay-theme='dark'
+      ref='feedbackOverlay'
+      @close='resetForm'>
+      {{messageText}}
+    </sweet-modal>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import MaskedInput from 'vue-text-mask';
+import { SweetModal } from 'sweet-modal-vue';
+
 import $ from 'jquery';
 
 Vue.component('masked-input', MaskedInput);
@@ -92,7 +104,7 @@ Vue.component('masked-input', MaskedInput);
 export default {
   name: 'feedback-component',
 
-  props: ['productName', 'productColor'],
+  props: ['productName', 'productColor', 'messages'],
 
   data() {
     return {
@@ -102,12 +114,14 @@ export default {
       currentCustomerPhone: null,
       currentProductQuantity: null,
       currentCustomerComment: null,
-      isSubmitClicked: false
+      isSubmitClicked: false,
+      messageText: null,
+      messageStatus: null
     }
   },
 
   components: {
-
+    SweetModal
   },
 
   computed: {
@@ -168,31 +182,44 @@ export default {
       this.isSubmitClicked = true;
       if (this.validateQuantity && this.validateProduct && this.validateName && this.validatePhone && this.validateColor && this.validateComment ) {
         console.log('form is valid');
-
-        let data = {
-          name: this.currentCustomerName,
-          phone: this.currentCustomerPhone,
-          product: this.currentProductName,
-          color: this.currentProductColor,
-          quantity: this.currentProductQuantity,
-          comment: this.currentCustomerComment
-        }
-
-        $.ajax({
-          type: "post",
-          url: "/php/email.php",
-          dataType:"text",
-          data: data,
-          success: (response) => {
-            console.log(response);
-          },
-          error: () => {
-            console.log('К сожалению сооющение не отправлено. Попробуйте ещё раз.');
-          }
-        })
+        this.sendForm();
       } else {
         console.log('form has errors');
       }
+    },
+
+    sendForm() {
+      let data = {
+        name: this.currentCustomerName,
+        phone: this.currentCustomerPhone,
+        product: this.currentProductName,
+        color: this.currentProductColor,
+        quantity: this.currentProductQuantity,
+        comment: this.currentCustomerComment
+      }
+
+      $.ajax({
+        type: "post",
+        url: "/php/email.php",
+        dataType:"text",
+        data: data,
+        success: (response) => {
+          this.messageStatus = response;
+
+          if (response == 'success') {
+            this.messageText = this.messages.success;
+            this.$refs.feedbackOverlay.open();
+          } else {
+            this.messageText = this.messages.error;
+            this.$refs.feedbackOverlay.open();
+          }
+        },
+        error: () => {
+          this.messageText = this.messages.error;
+          this.messageStatus = 'error';
+          this.$refs.feedbackOverlay.open();
+        }
+      })
     },
 
     setPhoneBeginning() {
@@ -201,6 +228,22 @@ export default {
         setTimeout(function() {
           document.getElementById('customerPhone').selectionStart = 5;
         }, 100);
+      }
+    },
+
+    resetForm() {
+      if (this.messageStatus == 'success') {
+        this.currentProductName = null;
+        this.currentProductColor = null;
+        this.currentCustomerName = null;
+        this.currentCustomerPhone = null;
+        this.currentProductQuantity = null;
+        this.currentCustomerComment = null;
+        this.isSubmitClicked = false;
+        this.messageText = null;
+        this.messageStatus = null;
+
+        console.log('Reset form');
       }
     }
   }
