@@ -178,7 +178,6 @@ export default {
 
   methods: {
     submitForm() {
-      console.log('Submit');
       this.isSubmitClicked = true;
       if (this.validateQuantity && this.validateProduct && this.validateName && this.validatePhone && this.validateColor && this.validateComment ) {
         this.sendForm();
@@ -201,7 +200,7 @@ export default {
 
       $.ajax({
         type: "post",
-        url: "/php/email.php",
+        url: "/static/php/email.php",
         dataType:"text",
         data: data,
         success: (response) => {
@@ -233,10 +232,8 @@ export default {
     },
 
     resetForm() {
-      this.messageText = null;
-      this.messageStatus = null;
-
       if (this.messageStatus == 'success') {
+        this.$parent.resetFields();
         this.currentProductName = null;
         this.currentProductColor = null;
         this.currentCustomerName = null;
@@ -245,6 +242,9 @@ export default {
         this.currentCustomerComment = null;
         this.isSubmitClicked = false;
       }
+
+      this.messageText = null;
+      this.messageStatus = null;
     }
   }
 }

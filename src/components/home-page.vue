@@ -65,6 +65,13 @@ export default {
     contacts() {
       return this.$parent.app.contacts;
     }
+  },
+
+  methods: {
+    resetFields() {
+      this.$parent.productName = null;
+      this.$parent.productColor = null;
+    }
   }
 }
 </script>
