@@ -130,7 +130,7 @@ export default {
       if (this.currentProductQuantity == null || this.currentProductQuantity == '') {
         return true;
       } else {
-        return reg.test(this.currentProductQuantity);
+        return reg.test(this.currentProductQuantity) && this.currentProductQuantity < 1000;
       }
     },
 
@@ -163,7 +163,7 @@ export default {
     },
 
     validateColor() {
-      let reg = /^[a-zа-яё, ]*$/i;
+      let reg = /^[a-zа-яё, -]*$/i;
       if (this.currentProductColor == null || this.currentProductColor == '') {
         return true;
       } else {
@@ -181,10 +181,11 @@ export default {
       console.log('Submit');
       this.isSubmitClicked = true;
       if (this.validateQuantity && this.validateProduct && this.validateName && this.validatePhone && this.validateColor && this.validateComment ) {
-        console.log('form is valid');
         this.sendForm();
       } else {
-        console.log('form has errors');
+        this.messageText = this.messages.warning;
+        this.messageStatus = 'warning';
+        this.$refs.feedbackOverlay.open();
       }
     },
 
@@ -232,6 +233,9 @@ export default {
     },
 
     resetForm() {
+      this.messageText = null;
+      this.messageStatus = null;
+
       if (this.messageStatus == 'success') {
         this.currentProductName = null;
         this.currentProductColor = null;
@@ -240,10 +244,6 @@ export default {
         this.currentProductQuantity = null;
         this.currentCustomerComment = null;
         this.isSubmitClicked = false;
-        this.messageText = null;
-        this.messageStatus = null;
-
-        console.log('Reset form');
       }
     }
   }
