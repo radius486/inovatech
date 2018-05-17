@@ -7,6 +7,7 @@ import PlasticPage from '@/components/plastic-page.vue';
 import PartsPage from '@/components/parts-page.vue';
 import ServicesPage from '@/components/services-page.vue';
 import ProductPage from '@/components/product-page.vue';
+import NotfoundPage from '@/components/notfound-page.vue';
 import $ from 'jquery';
 
 Vue.use(Router)
@@ -105,6 +106,18 @@ export default new Router({
       path: '/services',
       name: 'ServicesPage',
       component: ServicesPage
+    },
+
+    {
+      path: '/not-found',
+      name: 'NotfoundPage',
+      component: NotfoundPage
+    },
+
+    {
+      path: '*',
+      name: 'UnknownPages',
+      component: NotfoundPage
     }
   ]
 });

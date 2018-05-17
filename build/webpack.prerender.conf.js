@@ -5,7 +5,7 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin')
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 const app = require('../static/json/app.json');
 
-const routePaths = ['/', '/3d-printers', '/3d-pens', '/plastic', '/parts', '/services'];
+const routePaths = ['/', '/3d-printers', '/3d-pens', '/plastic', '/parts', '/services', '/not-found'];
 
 Object.keys(app.printers).map(function(el) {
   routePaths.push('/3d-printers/' + el)
