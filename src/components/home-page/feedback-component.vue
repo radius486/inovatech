@@ -59,7 +59,7 @@
             :mask="['+', /\d/, /\d/, /\d/, '(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/]"
             placeholderChar="_">
           </masked-input>
-          <label for="customerPhone" :class="{'active':currentCustomerPhone}">Номер телефона</label>
+          <label for="customerPhone" :class="{'active':currentCustomerPhone}">*Номер телефона</label>
           <!--{{validatePhone}}-->
         </div>
       </div>
@@ -80,6 +80,8 @@
       <input type="submit" class="feedback-form_submit" value="Отправить" :disabled='disabled' :class="{ 'disabled': disabled }" @click.prevent=submitForm()>
     </form>
 
+    <span class="feedback-form_info-text">* Поля, обязательные для заполнения.</span>
+
     <sweet-modal
       class='feedback-overlay'
       :icon='messageStatus'
@@ -88,6 +90,7 @@
       ref='feedbackOverlay'
       @close='resetForm'>
       {{messageText}}
+      <button slot="button" @click.prevent='$refs.feedbackOverlay.close()'>Закрыть</button>
     </sweet-modal>
   </div>
 </template>
