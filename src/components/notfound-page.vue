@@ -1,5 +1,5 @@
 <template>
-  <div class="notfound-page" :style="{minHeight: ''+ blockHeight +'px'}">
+  <div class="notfound-page">
     <div class="container">
       <router-link to='/' class='back-link'>« На главную</router-link>
       <section class="notfound_content" :style="{minHeight: ''+ contentHeight +'px'}">
@@ -19,7 +19,6 @@ export default {
 
   data () {
     return {
-      blockHeight: 0,
       contentHeight: 0
     }
   },
@@ -27,12 +26,10 @@ export default {
   mounted() {
 
     $(document).ready(() => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
       this.contentHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight() - $('.back-link').outerHeight() - 20;
     });
 
     $(window).on('resize', () => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
       this.contentHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight() - $('.back-link').outerHeight() - 20;
     });
   },

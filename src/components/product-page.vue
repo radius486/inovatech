@@ -1,5 +1,5 @@
 <template>
-  <div class="product-page" :style="{minHeight: ''+ blockHeight +'px'}">
+  <div class="product-page">
     <div class="container">
       <router-link :to="{name: backLinkPath}" v-if='backLinkPath' class='back-link'>{{backLinkText}}</router-link>
       <section v-if='product' class="product">
@@ -21,14 +21,11 @@
 
 <script>
 
-import $ from 'jquery';
-
 export default {
   name: 'product-page',
 
   data () {
     return {
-      blockHeight: 0,
       productId: null,
       routeName: null
     }
@@ -37,14 +34,6 @@ export default {
   mounted() {
     this.productId = this.$route.params.id;
     this.routeName = this.$route.name;
-
-    $(document).ready(() => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
-    });
-
-    $(window).on('resize', () => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
-    });
   },
 
   computed: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="printers-page catalog-page" :style="{minHeight: ''+ blockHeight +'px'}">
+  <div class="printers-page catalog-page">
     <section class="catalog">
       <div class="container">
         <router-link to='/' class='back-link'>« На главную</router-link>
@@ -25,25 +25,6 @@ import $ from 'jquery';
 
 export default {
   name: 'printers-page',
-
-  components: {
-  },
-
-  mounted() {
-    $(document).ready(() => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
-    });
-
-    $(window).on('resize', () => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
-    });
-  },
-
-  data () {
-    return {
-      blockHeight: 0
-    }
-  },
 
   computed: {
     printers() {

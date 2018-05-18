@@ -2,7 +2,7 @@
   <div id="app">
     <header-component :phone="app.phone" :email='app.email'></header-component>
     <transition name='fade'>
-      <router-view/>
+      <router-view :style="{minHeight: ''+ blockHeight +'px'}"/>
     </transition>
     <transition name='fade'>
       <button v-if='showScroll' class="to-top-button" @click.prevent='scrollToTop()' title='наверх'>to top</button>
@@ -24,13 +24,24 @@ export default {
       app: {},
       productName: null,
       productColor: null,
-      scrollTop: null
+      scrollTop: null,
+      blockHeight: 0
     }
   },
 
   created() {
     this.getData();
     window.addEventListener('scroll', this.handleScroll);
+  },
+
+  mounted() {
+    $(document).ready(() => {
+      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
+    });
+
+    $(window).on('resize', () => {
+      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
+    });
   },
 
   destroyed () {

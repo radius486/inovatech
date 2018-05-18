@@ -1,5 +1,5 @@
 <template>
-  <div class="services-page" :style="{minHeight: ''+ blockHeight +'px'}">
+  <div class="services-page" >
     <div class="container">
       <router-link to='/' class='back-link'>« На главную</router-link>
       <section v-if='services' class="services">
@@ -19,27 +19,8 @@
 
 <script>
 
-import $ from 'jquery';
-
 export default {
   name: 'services-page',
-
-  data () {
-    return {
-      blockHeight: 0,
-    }
-  },
-
-  mounted() {
-
-    $(document).ready(() => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
-    });
-
-    $(window).on('resize', () => {
-      this.blockHeight = window.innerHeight  - $('.header').outerHeight() - $('.footer').outerHeight();
-    });
-  },
 
   computed: {
     services() {
