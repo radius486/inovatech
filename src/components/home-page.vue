@@ -48,6 +48,7 @@
 import ContactsComponent from "./home-page/contacts-component.vue";
 import CarouselComponent from "./home-page/carousel-component.vue";
 import FeedbackComponent from "./home-page/feedback-component.vue";
+
 export default {
   name: 'home-page',
 

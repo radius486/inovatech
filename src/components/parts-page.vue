@@ -21,8 +21,6 @@
 
 <script>
 
-import $ from 'jquery';
-
 export default {
   name: 'parts-page',
 
@@ -38,7 +36,7 @@ export default {
     },
 
     saveScroll() {
-      window.scrollHeight = $(window).scrollTop();
+      window.scrollHeight = document.documentElement.scrollTop;
     }
   }
 }
