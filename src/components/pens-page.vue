@@ -36,7 +36,7 @@ export default {
     },
 
     saveScroll() {
-      window.scrollHeight = document.documentElement.scrollTop;
+      window.scrollHeight = window.scrollY;
     }
   }
 }
