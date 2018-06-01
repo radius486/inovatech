@@ -7,7 +7,7 @@
       </div>
       <div class="container catalog-list" @click='saveScroll()'>
         <router-link :to='linkPath(key)' v-if='plastics' class="catalog-product" v-for='(plastic, key) in plastics' :key='key'>
-          <img class="catalog-product_image" :src='plastic.image'></img>
+          <div class="catalog-product_image"  :style="{backgroundImage: 'url(' + plastic.image + ')'}"></div>
           <h3 class="catalog-product_title">{{plastic.title}}</h3>
           <p class="catalog-product_description">{{plastic.description_short}}</p>
           <span class="catalog-product_more">Подробнее...</span>

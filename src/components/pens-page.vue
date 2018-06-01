@@ -6,12 +6,12 @@
         <h2  class="catalog_title">3D ручки</h2>
       </div>
       <div class="container catalog-list" @click='saveScroll()'>
-        <router-link :to='linkPath(key)' v-if='pens' class="catalog-product" v-for='(printer, key) in pens' :key='key'>
-          <img class="catalog-product_image" :src='printer.image'></img>
-          <h3 class="catalog-product_title">{{printer.title}}</h3>
-          <p class="catalog-product_description">{{printer.description_short}}</p>
+        <router-link :to='linkPath(key)' v-if='pens' class="catalog-product" v-for='(pen, key) in pens' :key='key'>
+          <div class="catalog-product_image" :style="{backgroundImage: 'url(' + pen.image + ')'}"></div>
+          <h3 class="catalog-product_title">{{pen.title}}</h3>
+          <p class="catalog-product_description">{{pen.description_short}}</p>
           <span class="catalog-product_more">Подробнее...</span>
-          <div class="catalog-product_price">{{printer.price}}</div>
+          <div class="catalog-product_price">{{pen.price}}</div>
         </router-link>
         <p v-if='!pens' class="catalog-none">Нет в наличии</p>
       </div>

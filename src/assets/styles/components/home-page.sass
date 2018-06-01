@@ -76,9 +76,30 @@
 
 
 .home-category_image
-  max-width: 100%
   width: 100%
-  height: auto
+  background-repeat: no-repeat
+  background-position: center
+  background-size: contain
+
+  &:before
+    content: ''
+    display: block
+    margin-bottom: calc(100% * 4/5)
+
+  .home-category-1 &
+    background-image: url(../assets/images/home-category-1.jpg)
+
+  .home-category-2 &
+    background-image: url(../assets/images/home-category-2.jpg)
+
+  .home-category-3 &
+    background-image: url(../assets/images/home-category-3.jpg)
+
+  .home-category-4 &
+    background-image: url(../assets/images/home-category-4.jpg)
+
+  .home-category-5 &
+    background-image: url(../assets/images/home-category-5.jpg)
 
 
 .home-category_title

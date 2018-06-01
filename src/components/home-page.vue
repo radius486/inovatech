@@ -8,24 +8,24 @@
       </section>
       <section class="home-catalog" id="catalog">
         <div class="container">
-          <router-link  v-if='$parent.app.printers' to="/3d-printers"class="home-category">
-            <img class="home-category_image" src='../assets/images/home-category-1.jpg'></img>
+          <router-link  v-if='$parent.app.printers' to="/3d-printers"class="home-category home-category-1">
+          <div class="home-category_image"></div>
           <h3 class="home-category_title">3D принтеры</h3>
         </router-link>
-        <router-link  v-if='$parent.app.pens' to="/3d-pens"class="home-category">
-          <img class="home-category_image" src='../assets/images/home-category-2.jpg'></img>
+        <router-link  v-if='$parent.app.pens' to="/3d-pens" class="home-category home-category-2">
+          <div class="home-category_image"></div>
           <h3 class="home-category_title">3D ручки</h3>
         </router-link>
-        <router-link v-if='$parent.app.plastics' to="/plastic"class="home-category">
-          <img class="home-category_image" src='../assets/images/home-category-3.jpg'></img>
+        <router-link v-if='$parent.app.plastics' to="/plastic" class="home-category home-category-3">
+          <div class="home-category_image"></div>
           <h3 class="home-category_title">Пластик</h3>
         </router-link>
-        <router-link  v-if='$parent.app.parts' to="/parts"class="home-category">
-          <img class="home-category_image" src='../assets/images/home-category-4.jpg'></img>
+        <router-link  v-if='$parent.app.parts' to="/parts" class="home-category home-category-4">
+          <div class="home-category_image"></div>
           <h3 class="home-category_title">Запчасти</h3>
         </router-link>
-        <router-link v-if='$parent.app.services' to="/services"class="home-category">
-          <img class="home-category_image" src='../assets/images/home-category-5.jpg'></img>
+        <router-link v-if='$parent.app.services' to="/services" class="home-category home-category-5">
+          <div class="home-category_image"></div>
           <h3 class="home-category_title">Услуги</h3>
         </router-link>
       </div>
