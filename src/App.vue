@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <header-component :phone="app.phone" :email='app.email'></header-component>
-    <transition name='fade'>
-      <router-view :style="{minHeight: ''+ blockHeight +'px'}"/>
-    </transition>
+    <router-view :style="{minHeight: ''+ blockHeight +'px'}"/>
     <transition name='fade'>
       <button v-if='showScroll' class="to-top-button" @click.prevent='scrollToTop()' title='наверх'>to top</button>
     </transition>

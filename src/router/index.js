@@ -33,17 +33,12 @@ export default new Router({
       }, letency);
     } else {
       let scrollHeight = 0;
-      let letency = 250;
 
       if(window.scrollHeight && (to.name != "HomePage") && (from.name == 'PlasticPage' || from.name == 'PrinterPage' || from.name == 'PenPage' || from.name == 'PartPage')) {
         scrollHeight = window.scrollHeight;
-        letency = 400;
       }
 
-      setTimeout(() => {
-        $('html, body').scrollTop(scrollHeight);
-      }, letency);
-
+      $('html, body').scrollTop(scrollHeight);
     }
   },
 
