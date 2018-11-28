@@ -33,7 +33,11 @@ const webpackConfig = merge(baseWebpackConfig, {
       phantomPageViewportSize: {
         width: 1242,
         height: 742
-      }
+      },
+      renderer: new Renderer({
+        maxConcurrentRoutes: 1,
+        //headless: false
+      })
     })
   ]
 })
