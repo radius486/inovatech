@@ -26,7 +26,9 @@ export default {
 
   computed: {
     plastics() {
-      return this.$parent.app.plastics;
+      if (this.$parent.app.plastics) {
+        return this.$parent.app.plastics.catalog;
+      }
     }
   },
 

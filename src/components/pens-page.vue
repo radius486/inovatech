@@ -26,7 +26,9 @@ export default {
 
   computed: {
     pens() {
-      return this.$parent.app.pens;
+      if (this.$parent.app.pens) {
+        return this.$parent.app.pens.catalog;
+      }
     }
   },
 

@@ -26,7 +26,9 @@ export default {
 
   computed: {
     parts() {
-      return this.$parent.app.parts;
+      if (this.$parent.app.parts) {
+        return this.$parent.app.parts.catalog;
+      }
     }
   },
 

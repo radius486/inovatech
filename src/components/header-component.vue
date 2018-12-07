@@ -9,7 +9,7 @@
     <section class='header-navigation'>
       <div class='container'>
         <router-link to="/" class="logo" :title='logoTitle'>
-          <img src="../assets/images/logo.png">
+          <img :src="$parent.app.logo">
         </router-link>
         <nav class="header-menu">
           <router-link to="/#catalog" class="header-menu_link">Каталог</router-link>

@@ -26,7 +26,9 @@ export default {
 
   computed: {
     printers() {
-      return this.$parent.app.printers;
+      if (this.$parent.app.printers) {
+        return this.$parent.app.printers.catalog;
+      }
     }
   },
 

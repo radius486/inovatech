@@ -39,38 +39,38 @@ export default {
   computed: {
     product() {
       if (this.$parent.app.printers && this.routeName == 'PrinterPage') {
-        return this.$parent.app.printers[this.productId];
+        return this.$parent.app.printers.catalog[this.productId];
       }
 
       if (this.$parent.app.pens && this.routeName == 'PenPage') {
 
-        return this.$parent.app.pens[this.productId];
+        return this.$parent.app.pens.catalog[this.productId];
       }
 
       if (this.$parent.app.plastics && this.routeName == 'PlasticPage') {
-        return this.$parent.app.plastics[this.productId];
+        return this.$parent.app.plastics.catalog[this.productId];
       }
 
       if (this.$parent.app.parts && this.routeName == 'PartPage') {
-        return this.$parent.app.parts[this.productId];
+        return this.$parent.app.parts.catalog[this.productId];
       }
     },
 
     backLinkText() {
-      if (this.routeName == 'PrinterPage') {
-        return '« ЗD-принтеры';
+      if (this.routeName == 'PrinterPage' && this.$parent.app.printers) {
+        return '« ' + this.$parent.app.printers.title;
       }
 
-      if (this.routeName == 'PenPage') {
-        return '« 3D-ручки';
+      if (this.routeName == 'PenPage' && this.$parent.app.pens) {
+        return '« ' + this.$parent.app.pens.title;
       }
 
-      if (this.routeName == 'PlasticPage') {
-        return '« Пластик';
+      if (this.routeName == 'PlasticPage' && this.$parent.app.plastics) {
+        return '« ' + this.$parent.app.plastics.title;
       }
 
-      if (this.routeName == 'PartPage') {
-        return '« Запчасти';
+      if (this.routeName == 'PartPage' && this.$parent.app.parts) {
+        return '« ' + this.$parent.app.parts.title;
       }
     },
 
