@@ -57,9 +57,7 @@ export default {
 
   computed: {
     services() {
-      if (this.$parent.app.services) {
-        return this.$parent.app.services;
-      }
+      return this.$parent.app.services;
     }
   },
 
