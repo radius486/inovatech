@@ -29,6 +29,9 @@
           <h3 class="home-category_title">{{ $parent.app.services.title }}</h3>
         </router-link>
       </div>
+      <div v-if='$parent.app.categories_text' class="container home-catalog_text-container">
+        <div class="home-catalog_text" v-html='$parent.app.categories_text'></div>
+      </div>
     </section>
     <section class="home-contacts" id="contacts">
       <div class="container">
