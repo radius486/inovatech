@@ -1,12 +1,7 @@
 <template>
   <div class="contacts_block">
     <h2 class="contacts_title">{{contacts.title}}</h2>
-    <p class="contacts_company">{{contacts.company}}</p>
-    <p class="contacts_unp">{{contacts.unp}}</p>
-    <p class="contacts_phone" v-html='contacts.phones'></p>
-    <p class="contacts_email">{{contacts.email}}</p>
-    <p class="contacts_address">{{contacts.address}}</p>
-    <p class="contacts_working-time">{{contacts.workingTime}}</p>
+    <div class="contacts_info" v-html='contacts.info'></div>
   </div>
 </template>
 
