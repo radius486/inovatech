@@ -9,7 +9,7 @@
     <section class='header-navigation'>
       <div class='container'>
         <router-link to="/" class="logo" :title='logoTitle'>
-          <img src="../assets/images/logo.svg">
+          <img src="../assets/images/logo.png">
         </router-link>
         <nav class="header-menu">
           <router-link to="/#catalog" class="header-menu_link">Каталог</router-link>
@@ -39,7 +39,7 @@ export default {
       if (this.$route.path != '/') {
         return 'На главную';
       } else {
-        return 'Иноватех';
+        return this.$parent.app.title;
       }
     }
   }
