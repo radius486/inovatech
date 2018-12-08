@@ -4,6 +4,9 @@
       <div class="container">
         <router-link to='/' class='back-link'>« На главную</router-link>
         <h2 v-if='$parent.app.printers' class="catalog_title">{{ $parent.app.printers.title }}</h2>
+        <div class="catalog-description"
+          v-if='$parent.app.printers && $parent.app.printers.description'
+          v-html='$parent.app.printers.description'></div>
       </div>
       <div class="container catalog-list" @click='saveScroll()'>
         <router-link :to='linkPath(key)' v-if='printers' class="catalog-product" v-for='(printer, key) in printers' :key='key'>
