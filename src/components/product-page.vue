@@ -43,7 +43,6 @@ export default {
       }
 
       if (this.$parent.app.pens && this.routeName == 'PenPage') {
-
         return this.$parent.app.pens.catalog[this.productId];
       }
 
@@ -53,6 +52,10 @@ export default {
 
       if (this.$parent.app.parts && this.routeName == 'PartPage') {
         return this.$parent.app.parts.catalog[this.productId];
+      }
+
+      if (this.$parent.app.gifts && this.routeName == 'GiftPage') {
+        return this.$parent.app.gifts.catalog[this.productId];
       }
     },
 
@@ -72,6 +75,10 @@ export default {
       if (this.routeName == 'PartPage' && this.$parent.app.parts) {
         return '« ' + this.$parent.app.parts.title;
       }
+
+      if (this.routeName == 'GiftPage' && this.$parent.app.gifts) {
+        return '« ' + this.$parent.app.gifts.title;
+      }
     },
 
     backLinkPath() {
@@ -89,6 +96,10 @@ export default {
 
       if (this.routeName == 'PartPage') {
         return 'PartsPage';
+      }
+
+      if (this.routeName == 'GiftPage') {
+        return 'GiftsPage';
       }
     }
   },

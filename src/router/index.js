@@ -31,7 +31,7 @@ export default new Router({
     } else {
       let scrollHeight = 0;
 
-      if(window.scrollHeight && (to.name != "HomePage") && (from.name == 'PlasticPage' || from.name == 'PrinterPage' || from.name == 'PenPage' || from.name == 'PartPage')) {
+      if(window.scrollHeight && (to.name != "HomePage") && (from.name == 'PlasticPage' || from.name == 'PrinterPage' || from.name == 'PenPage' || from.name == 'PartPage' || from.name == 'GiftPage')) {
         scrollHeight = window.scrollHeight;
       }
 
@@ -71,6 +71,12 @@ export default new Router({
     },
 
     {
+      path: '/gifts',
+      name: 'GiftsPage',
+      component: CatalogPage
+    },
+
+    {
       path: '/3d-printers/:id',
       name: 'PrinterPage',
       component: ProductPage
@@ -91,6 +97,12 @@ export default new Router({
     {
       path: '/parts/:id',
       name: 'PartPage',
+      component: ProductPage
+    },
+
+    {
+      path: '/gifts/:id',
+      name: 'GiftPage',
       component: ProductPage
     },
 

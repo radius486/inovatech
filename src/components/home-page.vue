@@ -10,23 +10,27 @@
       <div class="container">
         <router-link  v-if='$parent.app.printers' to="/3d-printers"class="home-category home-category-1">
           <div class="home-category_image" :style="{backgroundImage: `url(${$parent.app.printers.category_image})`}"></div>
-          <h3 class="home-category_title">{{ $parent.app.printers.title }}</h3>
+          <h3 class="home-category_title">{{ $parent.app.printers.menu_title }}</h3>
         </router-link>
         <router-link  v-if='$parent.app.pens' to="/3d-pens" class="home-category home-category-2">
           <div class="home-category_image" :style="{backgroundImage: `url(${$parent.app.pens.category_image})`}"></div>
-          <h3 class="home-category_title">{{ $parent.app.pens.title }}</h3>
+          <h3 class="home-category_title">{{ $parent.app.pens.menu_title }}</h3>
         </router-link>
         <router-link v-if='$parent.app.plastics' to="/plastic" class="home-category home-category-3">
           <div class="home-category_image" :style="{backgroundImage: `url(${$parent.app.plastics.category_image})`}"></div>
-          <h3 class="home-category_title">{{ $parent.app.plastics.title }}</h3>
+          <h3 class="home-category_title">{{ $parent.app.plastics.menu_title }}</h3>
         </router-link>
         <router-link  v-if='$parent.app.parts' to="/parts" class="home-category home-category-4">
           <div class="home-category_image" :style="{backgroundImage: `url(${$parent.app.parts.category_image})`}"></div>
-          <h3 class="home-category_title">{{ $parent.app.parts.title }}</h3>
+          <h3 class="home-category_title">{{ $parent.app.parts.menu_title }}</h3>
+        </router-link>
+        <router-link  v-if='$parent.app.gifts' to="/gifts" class="home-category home-category-4">
+          <div class="home-category_image" :style="{backgroundImage: `url(${$parent.app.gifts.category_image})`}"></div>
+          <h3 class="home-category_title">{{ $parent.app.gifts.menu_title }}</h3>
         </router-link>
         <router-link v-if='$parent.app.services' to="/services" class="home-category home-category-5">
           <div class="home-category_image" :style="{backgroundImage: `url(${$parent.app.services.category_image})`}"></div>
-          <h3 class="home-category_title">{{ $parent.app.services.title }}</h3>
+          <h3 class="home-category_title">{{ $parent.app.services.menu_title }}</h3>
         </router-link>
       </div>
       <div v-if='$parent.app.categories_text' class="container home-catalog_text-container">

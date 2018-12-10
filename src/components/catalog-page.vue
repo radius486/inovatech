@@ -54,6 +54,10 @@ export default {
       if (this.$parent.app.parts && this.routeName == 'PartsPage') {
         return this.$parent.app.parts;
       }
+
+      if (this.$parent.app.gifts && this.routeName == 'GiftsPage') {
+        return this.$parent.app.gifts;
+      }
     },
 
     catalog_list() {
