@@ -1,10 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import HomePage from '@/components/home-page.vue';
-import PrintersPage from '@/components/printers-page.vue';
-import PensPage from '@/components/pens-page.vue';
-import PlasticPage from '@/components/plastic-page.vue';
-import PartsPage from '@/components/parts-page.vue';
+import CatalogPage from '@/components/catalog-page.vue';
 import ServicesPage from '@/components/services-page.vue';
 import ProductPage from '@/components/product-page.vue';
 import NotfoundPage from '@/components/notfound-page.vue';
@@ -52,25 +49,25 @@ export default new Router({
     {
       path: '/3d-printers',
       name: 'PrintersPage',
-      component: PrintersPage
+      component: CatalogPage
     },
 
     {
       path: '/3d-pens',
       name: 'PensPage',
-      component: PensPage
+      component: CatalogPage
     },
 
     {
       path: '/plastic',
       name: 'PlasticsPage',
-      component: PlasticPage
+      component: CatalogPage
     },
 
     {
       path: '/parts',
       name: 'PartsPage',
-      component: PartsPage
+      component: CatalogPage
     },
 
     {
