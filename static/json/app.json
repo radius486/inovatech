@@ -8,8 +8,6 @@
 
   "email": "3ddoma.by@gmail.com",
 
-  "categories_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-
   "footer_text": "ИП Дубовик Владимир Георгиевич Юридический адрес: 220094, г.Минск, пр-т Рокоссовского, д.4, корп.4, кв.440 УНП 192944042",
 
 
@@ -60,8 +58,6 @@
 
     "menu_title": "3D принтеры",
 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-
     "category_image": "/static/images/home-category-1.jpg",
 
     "catalog": {
@@ -107,8 +103,6 @@
     "title": "3D ручки",
 
     "menu_title": "3D ручки",
-
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
     "category_image": "/static/images/home-category-2.jpg",
 
@@ -195,8 +189,6 @@
     "title": "Пластик",
 
     "menu_title": "Пластик",
-
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
     "category_image": "/static/images/home-category-3.jpg",
 
@@ -1886,8 +1878,6 @@
 
     "menu_title": "Запчасти",
 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-
     "category_image": "/static/images/home-category-4.jpg",
 
     "catalog": {
@@ -2484,7 +2474,6 @@
 
     }
 
-
   },
 
 
@@ -2495,39 +2484,23 @@
 
     "menu_title": "Подарки",
 
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-
     "category_image": "/static/images/gift.jpg",
 
     "catalog": {
 
       "gift-1": {
 
-        "title": "Подарок 1",
+        "title": "3D ручка",
 
-        "description_short": "Подарок 1",
+        "description_short": "3D ручка голубого цвета с дисплеем",
 
-        "description": "Какой-то подарок чтобы его подарить.",
+        "description": "Характеристики 3Д ручки 3D pen-2 c дисплеем: <ul><li>Возможность рисовать двумя видами пластика, как ABS, так и PLA. Составляющие для этой ручки вполне экономичны, что является несомненным плюсом.</li> <li>На корпусе есть дисплей и кнопки регулировки температуры до 1 градуса, так что управлять ручкой стало заметно проще.</li> <li>Очень удобный диаметр носика — 0.7 мм. Теперь можно регулировать толщину линии рисунка, при уменьшении скорости рисования линия автоматически утоньшается. </li><li>Подходит для рисунков на плоскости 2D и 3D. </li><li>Если ручка не используется в течении 3 минут, то она переходит в режим ожидания. </li><li>Небольшой вес, ручка весит всего 65 грамм, она удобно ложится в руке и рисовать с ее помощью даже вертикальные линии весьма удобно и просто. </li><li>Четыре варианта цвета позволят выбрать понравившийся. Особенно это порадует тех, кто не любит черный цвет. </li><li>Ручкой такого типа сможет пользоваться даже ребенок. Рекомендованный возраст — от 9 лет, но при должном старании можно пробовать уже с 7. </li><li>Соотношение цена — качество весьма приятное. В данном ценовом сегменте — это один из лучших вариантов 3D ручки.</li></ul>",
 
-        "image": "/static/images/gifts/gift1.jpg",
+        "image": "/static/images/gifts/gift-1.jpg",
 
-        "price": "1500,00 руб"
+        "color": "голубой",
 
-      },
-
-
-
-      "gift-2": {
-
-        "title": "Подарок 2",
-
-        "description_short": "Подарок 2",
-
-        "description": "Очень нужная вещь, без неё вообще в каменном веке застрять можно",
-
-        "image": "/static/images/gifts/gift2.jpg",
-
-        "price": "1500,00 руб"
+        "price": "59,00 руб"
 
       }
 
