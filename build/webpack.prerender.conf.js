@@ -7,23 +7,23 @@ const app = require('../static/json/app.json');
 
 const routePaths = ['/', '/3d-printers', '/3d-pens', '/plastic', '/parts', '/gifts', '/services', '/not-found'];
 
-Object.keys(app.printers).map(function(el) {
+Object.keys(app.printers.catalog).map(function(el) {
   routePaths.push('/3d-printers/' + el)
 })
 
-Object.keys(app.pens).map(function(el) {
+Object.keys(app.pens.catalog).map(function(el) {
   routePaths.push('/3d-pens/' + el)
 })
 
-Object.keys(app.plastics).map(function(el) {
+Object.keys(app.plastics.catalog).map(function(el) {
   routePaths.push('/plastic/' + el)
 })
 
-Object.keys(app.parts).map(function(el) {
+Object.keys(app.parts.catalog).map(function(el) {
   routePaths.push('/parts/' + el)
 })
 
-Object.keys(app.gifts).map(function(el) {
+Object.keys(app.gifts.catalog).map(function(el) {
   routePaths.push('/gifts/' + el)
 })
 
@@ -39,7 +39,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         height: 742
       },
       renderer: new Renderer({
-        maxConcurrentRoutes: 1,
+        maxConcurrentRoutes: 5,
         //headless: false
       })
     })
