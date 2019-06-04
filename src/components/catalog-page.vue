@@ -69,7 +69,30 @@ export default {
 
   methods: {
     linkPath(key) {
-      return `${this.$route.path}/${key}`;
+      let routeName;
+
+      switch (this.$route.name) {
+        case 'PrintersPage':
+          routeName = 'PrinterPage'
+          break
+        case 'PensPage':
+          routeName = 'PenPage'
+          break
+        case 'PlasticsPage':
+          routeName = 'PlasticPage'
+          break
+        case 'PartsPage':
+          routeName = 'PartPage'
+          break
+        case 'GiftsPage':
+          routeName = 'GiftPage'
+          break
+        default:
+          routeName = this.$route.name
+      }
+
+      return { name: routeName, params: {id: key} }
+      //return `${this.$route.path}/${key}`;
     },
 
     saveScroll() {
