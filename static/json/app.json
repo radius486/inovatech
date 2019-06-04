@@ -14,9 +14,9 @@
 
   "carousel_slides": [
 
-    "/static/images/banner1.jpg",
+    "/static/images/banner2.jpg",
 
-    "/static/images/banner2.jpg"
+    "/static/images/banner1.jpg"
 
   ],
 
@@ -114,7 +114,7 @@
 
         "image": "/static/images/parts/detal1.jpg",
 
-        "price": "42,00"
+        "price": "42,00 руб"
 
       },
 
@@ -130,7 +130,7 @@
 
         "image": "/static/images/parts/detal2.jpg",
 
-        "price": "25,00"
+        "price": "25,00 руб"
 
       },
 
@@ -146,7 +146,7 @@
 
         "image": "/static/images/parts/detal3.jpg",
 
-        "price": "90,00"
+        "price": "90,00 руб"
 
       },
 
@@ -162,7 +162,7 @@
 
         "image": "/static/images/parts/detal4.jpg",
 
-        "price": "9,00"
+        "price": "9,00 руб"
 
       },
 
@@ -178,7 +178,7 @@
 
         "image": "/static/images/parts/detal5.jpg",
 
-        "price": "57,00"
+        "price": "57,00 руб"
 
       },
 
@@ -194,7 +194,7 @@
 
         "image": "/static/images/parts/detal6.jpg",
 
-        "price": "3,00"
+        "price": "3,00 руб"
 
       },
 
@@ -210,7 +210,7 @@
 
         "image": "/static/images/parts/detal7.jpg",
 
-        "price": "5,00"
+        "price": "5,00 руб"
 
       },
 
@@ -226,7 +226,7 @@
 
         "image": "/static/images/parts/detal8.jpg",
 
-        "price": "47,00"
+        "price": "28,00 руб"
 
       },
 
@@ -242,7 +242,7 @@
 
         "image": "/static/images/parts/detal8b.jpg",
 
-        "price": "17,00"
+        "price": "17,00 руб"
 
       },
 
@@ -258,7 +258,7 @@
 
         "image": "/static/images/parts/detal9.jpg",
 
-        "price": "9,00"
+        "price": "9,00 руб"
 
       },
 
@@ -274,7 +274,7 @@
 
         "image": "/static/images/parts/detal10.jpg",
 
-        "price": "40,00"
+        "price": "40,00 руб"
 
       },
 
@@ -290,7 +290,7 @@
 
         "image": "/static/images/parts/detal11.jpg",
 
-        "price": "2,00"
+        "price": "2,00 руб"
 
       },
 
@@ -306,7 +306,7 @@
 
         "image": "/static/images/parts/detal12.jpg",
 
-        "price": "6,00"
+        "price": "нет в наличии"
 
       },
 
@@ -322,7 +322,7 @@
 
         "image": "/static/images/parts/detal12.jpg",
 
-        "price": "6,00"
+        "price": "нет в наличии"
 
       },
 
@@ -338,7 +338,7 @@
 
         "image": "/static/images/parts/detal13.jpg",
 
-        "price": "5,00"
+        "price": "нет в наличии"
 
       },
 
@@ -354,7 +354,7 @@
 
         "image": "/static/images/parts/detal13.jpg",
 
-        "price": "5,00"
+        "price": "нет в наличии"
 
       },
 
@@ -370,7 +370,7 @@
 
         "image": "/static/images/parts/detal14.jpg",
 
-        "price": "5,00"
+        "price": "нет в наличии"
 
       },
 
@@ -386,7 +386,7 @@
 
         "image": "/static/images/parts/detal14.jpg",
 
-        "price": "5,00"
+        "price": "нет в наличии"
 
       },
 
@@ -402,7 +402,7 @@
 
         "image": "/static/images/parts/detal15.jpg",
 
-        "price": "3,00"
+        "price": "3,00 руб"
 
       },
 
@@ -418,7 +418,7 @@
 
         "image": "/static/images/parts/detal16.jpg",
 
-        "price": "4,00"
+        "price": "4,00 руб"
 
       },
 
@@ -434,7 +434,7 @@
 
         "image": "/static/images/parts/detal17.jpg",
 
-        "price": "4,00"
+        "price": "4,00 руб"
 
       },
 
@@ -450,7 +450,7 @@
 
         "image": "/static/images/parts/detal18.jpg",
 
-        "price": "9,00"
+        "price": "9,00 руб"
 
       },
 
@@ -466,7 +466,7 @@
 
         "image": "/static/images/parts/detal19.jpg",
 
-        "price": "4,00"
+        "price": "4,00 руб"
 
       },
 
@@ -482,7 +482,7 @@
 
         "image": "/static/images/parts/detal20.jpg",
 
-        "price": "8,00"
+        "price": "8,00 руб"
 
       },
 
@@ -498,7 +498,7 @@
 
         "image": "/static/images/parts/detal21.jpg",
 
-        "price": "7,00"
+        "price": "7,00 руб"
 
       },
 
@@ -514,7 +514,7 @@
 
         "image": "/static/images/parts/detal22.jpg",
 
-        "price": "5,00"
+        "price": "5,00 руб"
 
       },
 
@@ -530,7 +530,7 @@
 
         "image": "/static/images/parts/detal23.jpg",
 
-        "price": "5,00"
+        "price": "5,00 руб"
 
       },
 
@@ -546,7 +546,7 @@
 
         "image": "/static/images/parts/detal24.jpg",
 
-        "price": "5,00"
+        "price": "5,00 руб"
 
       },
 
@@ -562,7 +562,7 @@
 
         "image": "/static/images/parts/detal25.jpg",
 
-        "price": "6,00"
+        "price": "6,00 руб"
 
       },
 
@@ -578,7 +578,7 @@
 
         "image": "/static/images/parts/detal26.jpg",
 
-        "price": "2,00"
+        "price": "2,00 руб"
 
       },
 
@@ -594,7 +594,7 @@
 
         "image": "/static/images/parts/detal27.jpg",
 
-        "price": "6,00"
+        "price": "6,00 руб"
 
       },
 
@@ -610,7 +610,7 @@
 
         "image": "/static/images/parts/detal28.jpg",
 
-        "price": "10,00"
+        "price": "10,00 руб"
 
       },
 
@@ -626,7 +626,7 @@
 
         "image": "/static/images/parts/detal29.jpg",
 
-        "price": "6,00"
+        "price": "6,00 руб"
 
       },
 
@@ -642,7 +642,7 @@
 
         "image": "/static/images/parts/detal30.jpg",
 
-        "price": "4,00"
+        "price": "4,00 руб"
 
       },
 
@@ -658,7 +658,7 @@
 
         "image": "/static/images/parts/detal31.jpg",
 
-        "price": "3,00"
+        "price": "3,00 руб"
 
       },
 
@@ -674,7 +674,7 @@
 
         "image": "/static/images/parts/detal32.jpg",
 
-        "price": "1,50"
+        "price": "1,50 руб"
 
       },
 
@@ -690,7 +690,7 @@
 
         "image": "/static/images/parts/detal33.jpg",
 
-        "price": "1,00"
+        "price": "1,00 руб"
 
       }
 
@@ -758,7 +758,7 @@
 
         "color": "желтый",
 
-        "price": "нет в наличии"
+        "price": "48,00 руб"
 
       },
 
@@ -776,7 +776,7 @@
 
         "color": "белый",
 
-        "price": "нет в наличии"
+        "price": "48,00 руб"
 
       },
 
@@ -1190,7 +1190,7 @@
 
         "color": "красный",
 
-        "price": "нет в наличии"
+        "price": "48,00 руб"
 
       },
 
@@ -1856,7 +1856,7 @@
 
         "color": "синий",
 
-        "price": "нет в наличии"
+        "price": "48,00 руб"
 
       },
 
@@ -2072,7 +2072,7 @@
 
         "color": "черный",
 
-        "price": "нет в наличии"
+        "price": "48,00 руб"
 
       },
 
@@ -2379,6 +2379,41 @@
         "color": "желтый",
 
         "price": "1,40 руб"
+      },
+
+
+
+      "plastic-94": {
+
+        "title": "PET-G пластик 950 гр",
+
+        "description_short": "Белый PET-G пластик 950 гр",
+
+        "description": "PET-G пластик используется для 3D печати. <br>Произодитель - gReg (РФ) <br>Диаметр - 1,75 мм <br>Вес нетто - 950 гр <br>Длина - 300 м <br>Температура печати - 235 °C <br>Катушка упакована в коробку с вакуумным пакетом и осушителем. Прилагается zip-пакет для хранения, чтобы пластик не терял свои свойства.",
+
+        "image": "/static/images/plastics/k-pla-white.jpg",
+
+        "color": "белый",
+
+        "price": "52,00 руб"
+
+      },
+
+
+
+      "plastic-95": {
+
+        "title": "PET-G пластик 950 гр",
+
+        "description_short": "Черный PET-G пластик 950 гр",
+
+        "description": "PET-G пластик используется для 3D печати. <br>Произодитель - gReg (РФ) <br>Диаметр - 1,75 мм <br>Вес нетто - 950 гр <br>Длина - 300 м <br>Температура печати - 235 °C <br>Катушка упакована в коробку с вакуумным пакетом и осушителем. Прилагается zip-пакет для хранения, чтобы пластик не терял свои свойства.",
+
+        "image": "/static/images/plastics/k-pla-black.jpg",
+
+        "color": "черный",
+
+        "price": "52,00 руб"
 
       }
 
@@ -2446,7 +2481,7 @@
 
         "color": "фиолетовый",
 
-        "price": "44,00 руб"
+        "price": "нет в наличии"
 
       },
 
@@ -2481,7 +2516,7 @@
 
         "color": "голубой",
 
-        "price": "65,10 руб"
+        "price": "нет в наличии"
 
       },
 
@@ -2517,7 +2552,7 @@
 
         "color": "фиолетовый",
 
-        "price": "65,10 руб"
+        "price": "нет в наличии"
 
       },
 
@@ -2571,7 +2606,7 @@
 
         "color": "синий",
 
-        "price": "90,78 руб"
+        "price": "нет в наличии"
 
       },
 
@@ -2625,7 +2660,7 @@
 
         "color": "голубой",
 
-        "price": "49,90 руб"
+        "price": "нет в наличии"
 
       },
 
@@ -2661,7 +2696,7 @@
 
         "color": "серый",
 
-        "price": "нет в наличии"
+        "price": "49,90 руб"
 
       },
 
@@ -2716,7 +2751,7 @@
         "color": "розовый",
 
         "price": "184,00 руб"
-      
+
       }
 
     }
@@ -2761,7 +2796,7 @@
 
     "menu_title": "Услуги",
 
-    "description": "Мы оказываем услуги по 3D печати:<ul><li>Мелкосерийное производство</li><li>Прототипирование</li><li>3D Проектирование</li><li>Создание 3D изделий по чертежам</li><li>Создание 3D модели по образцу</li><li>Воссоздание сломанного изделия</li><li>Изготовление изделия по описанию</li><li>Постобработка и покраска готовых изделий</li><li>Макетирование</li><li>3D моделирование</li></ul>Наши преимущества:<ul><li>ABS, PLA и др.</li><li>Творческий и ответственный подход к заказам</li><li>Изготовление от 1 дня, в зависимости от сложности изделия</li><li>Широкая цветовая гамма</li><li>Наличный/Безналичный расчет</li><li>Скидки на большие объемы</li><li>Скидки постоянным клиентам</li></ul>Для изготовления нужен образец для замеров или чертеж, по которому будет создана виртуальная 3D модель. Либо готовая CAD модель, созданная в программе FreeCAD, Inventor, SolidWorks и т.п.</ul> <br>Стоимость работ:<ul><li>Стоимость 3D печати 1 грамма при высоте слоя:</li><ul><li>При заказе от 20 руб: 0,20 мм и толще – 0,35 руб.</li><li>При заказе до 20 руб: 0,20 мм и толще – 0,70 руб.</li></ul><li>3D моделирование — от 10 руб.</li></ul>При необходимости возможна печать в более высоком качестве (разрешении), в данном случае цену уточняйте у менеджера. Для просчета стоимости пришлите заявку на почту или звоните. <br>Поможем выбрать материал используемого пластика, а также ответим на все интересующие Вас вопросы.",
+    "description": "Мы оказываем услуги по 3D печати:<ul><li>Мелкосерийное производство</li><li>Прототипирование</li><li>3D Проектирование</li><li>Создание 3D изделий по чертежам</li><li>Создание 3D модели по образцу</li><li>Воссоздание сломанного изделия</li><li>Изготовление изделия по описанию</li><li>Постобработка и покраска готовых изделий</li><li>Макетирование</li><li>3D моделирование</li></ul>Наши преимущества:<ul><li>ABS, PLA и др.</li><li>Творческий и ответственный подход к заказам</li><li>Изготовление от 1 дня, в зависимости от сложности изделия</li><li>Широкая цветовая гамма</li><li>Наличный/Безналичный расчет</li><li>Скидки на большие объемы</li><li>Скидки постоянным клиентам</li></ul>Для изготовления нужен образец для замеров или чертеж, по которому будет создана виртуальная 3D модель. Либо готовая CAD модель, созданная в программе FreeCAD, Inventor, SolidWorks и т.п.</ul><p>Стоимость работ:</p><ul><li>Стоимость 3D печати 1 грамма при высоте слоя:</li><ul><li>При заказе от 20 руб: 0,20 мм и толще – 0,35 руб.</li><li>При заказе до 20 руб: 0,20 мм и толще – 0,70 руб.</li></ul><li>3D моделирование — от 10 руб.</li></ul>При необходимости возможна печать в более высоком качестве (разрешении), в данном случае цену уточняйте у менеджера. Для просчета стоимости пришлите заявку на почту или звоните. <br>Поможем выбрать материал используемого пластика, а также ответим на все интересующие Вас вопросы.",
 
     "category_image": "/static/images/home-category-5.jpg",
 
@@ -2790,7 +2825,10 @@
       "/static/images/services/Photo020.jpg",
       "/static/images/services/Photo021.jpg",
       "/static/images/services/Photo022.jpg",
-      "/static/images/services/Photo023.jpg"
+      "/static/images/services/Photo023.jpg",
+      "/static/images/services/Photo024.JPG",
+      "/static/images/services/Photo025.JPG",
+      "/static/images/services/Photo026.JPG"
     ]
 
   }
