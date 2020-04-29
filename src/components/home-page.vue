@@ -1,5 +1,10 @@
 <template>
   <div class="home-page">
+    <div class="home-page__info" v-if='$parent.app.info'>
+      <div class="container">
+        <div class="home-page__info-inner" v-html='$parent.app.info'></div>
+      </div>
+    </div>
     <section class='home-carousel'>
       <div class="container">
         <carousel-component v-if='slides' :slides='slides'></carousel-component>
